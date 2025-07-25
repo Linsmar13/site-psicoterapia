@@ -79,7 +79,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.4rem;
             font-weight: 600;
-            color: var(--subtitle-color); /* ALTERADO AQUI: Cor para #d8726a */
+            color: var(--subtitle-color); 
             margin-top: 15px; 
             margin-bottom: 0; 
             text-align: center;
@@ -118,7 +118,7 @@
         /* Seções de Conteúdo */
         section {
             margin-bottom: 60px;
-            padding: 30px 0 50px 0; 
+            padding: 30px 0 80px 0; /* ALTERADO AQUI: Aumentado o padding-bottom para 80px */
             background-color: var(--white);
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.05);
@@ -261,4 +261,210 @@
         /* Nota pequena abaixo dos botões */
         .whatsapp-note {
             font-size: 0.9rem !important; 
-            margin-top: 2
+            margin-top: 20px !important; 
+            color: var(--text-light) !important; 
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 1rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+            margin-top: 80px;
+            background-color: var(--white);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 40px;
+            }
+            header h1 {
+                font-size: 3.5rem;
+            }
+            header h1 span {
+                font-size: 1.6rem;
+            }
+            .trainers-names { 
+                font-size: 1.2rem;
+            }
+            .whatsapp-instruction { 
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            header h1 {
+                font-size: 2.8rem;
+                text-align: center;
+            }
+            header h1 span {
+                font-size: 1.4rem;
+                white-space: normal;
+            }
+            .trainers-names { 
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+            nav {
+                padding: 12px 0;
+            }
+            nav a {
+                display: block;
+                margin: 10px auto;
+                padding: 10px 20px;
+                font-size: 1rem;
+                max-width: 200px;
+            }
+            section {
+                padding: 20px 15px 40px 15px; /* ALTERADO AQUI: Adicionado padding-bottom de 40px */
+                margin-top: 25px;
+            }
+            section h2 {
+                font-size: 2.2rem;
+            }
+            section h3 {
+                font-size: 1.8rem;
+                text-align: left;
+                display: block;
+            }
+            p, ul li {
+                font-size: 1.1rem;
+            }
+            ul li {
+                max-width: 95%;
+                padding-left: 35px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            ul li::before {
+                left: 0;
+                font-size: 1.4rem;
+            }
+            ul li:last-child {
+                margin-bottom: 30px;
+            }
+            .call-to-action {
+                padding: 30px 20px;
+            }
+            .call-to-action p {
+                font-size: 1.6rem;
+            }
+            .btn-whatsapp {
+                font-size: 1.2rem;
+                padding: 14px 28px;
+            }
+            .whatsapp-instruction { 
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            header h1 span {
+                font-size: 1.1rem;
+            }
+            .trainers-names { 
+                font-size: 1rem;
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
+            section h3 {
+                font-size: 1.4rem;
+            }
+            p, ul li {
+                font-size: 1rem;
+            }
+            ul li::before {
+                font-size: 1.2rem;
+            }
+            ul li:last-child {
+                margin-bottom: 20px;
+            }
+            .call-to-action {
+                padding: 30px 20px;
+            }
+            .call-to-action p {
+                font-size: 1.3rem;
+            }
+            .btn-whatsapp {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .whatsapp-instruction { 
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="top-of-page"></div>
+
+<header>
+    <div class="container header-content">
+        <h1>TREINAMENTO PABE<span>Práticas &gt; Atitude &gt; Bem-Estar</span></h1> 
+        <p class="trainers-names">Waleska Cruz e Cybele Lassandro</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#top-of-page">Início</a>
+        <a href="#contato">Contato</a>
+    </div>
+</nav>
+
+<section class="container">
+    <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
+    <p>
+        O **TREINAMENTO PABE** é uma jornada transformadora focada em te equipar com **Práticas** eficientes, fortalecer sua **Atitude** positiva e promover um profundo **Bem-Estar**. Descubra um espaço de aprendizado e desenvolvimento para aplicar a Psicologia Positiva no seu dia a dia.
+    </p>
+    <p>
+        Neste treinamento, você aprenderá a identificar e utilizar suas forças de caráter, cultivar emoções positivas e construir um propósito de vida mais significativo. É um convite para você florescer em todas as áreas da sua vida.
+    </p>
+
+    <h3>🌿 O que você vai desenvolver no TREINAMENTO PABE</h3>
+    <ul>
+        <li>Aprender técnicas e exercícios para aumentar o bem-estar diário</li>
+        <li>Desenvolver uma mentalidade de crescimento e resiliência</li>
+        <li>Identificar e potencializar suas forças pessoais</li>
+        <li>Cultivar gratidão, otimismo e esperança</li>
+        <li>Construir relacionamentos mais positivos e significativos</li>
+        <li>Encontrar e viver com mais propósito e significado</li>
+    </ul>
+</section>
+
+<section id="contato" class="call-to-action container">
+    <p>✨ Pronto para iniciar sua jornada PABE?</p>
+    <p class="whatsapp-instruction">Fale conosco pelos telefones:</p>
+    <div class="whatsapp-buttons-container">
+        <a class="btn-whatsapp" href="https://wa.me/5541988180624" target="_blank" rel="noopener">
+            WhatsApp Waleska Cruz (41) 98818-0624
+        </a>
+        <a class="btn-whatsapp" href="https://wa.me/5541988180625" target="_blank" rel="noopener">
+            WhatsApp Cybele Lassandro (41) 98818-0625
+        </a>
+    </div>
+    <p class="whatsapp-note">Clique no número desejado para iniciar a conversa.</p>
+</section>
+
+<footer>
+    <div class="container">
+        &copy; 2025 TREINAMENTO PABE - Todos os direitos reservados
+    </div>
+</footer>
+
+</body>
+</html>
