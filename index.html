@@ -82,7 +82,7 @@
             font-size: 1.8rem;
             font-weight: 600;
             margin-top: 10px;
-            color: var(--text-medium);
+            color: var(--main-title-color); /* <<<< COR DO SUBTÍTULO DO CABEÇALHO */
             white-space: nowrap; /* Tenta manter o subtítulo em uma linha, se possível */
         }
 
@@ -172,7 +172,7 @@
         ul {
             list-style: none;
             padding-left: 0;
-            margin-bottom: 30px;
+            margin-bottom: 30px; /* Margem padrão da lista */
         }
 
         ul li {
@@ -193,26 +193,29 @@
             position: absolute;
             left: 0;
             top: 0;
-            color: var(--subtitle-color);
+            color: var(--subtitle-color); /* <<<< CORRIGIDO PARA --subtitle-color */
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
         }
 
+        ul li:last-child {
+            margin-bottom: 40px; /* <<<< ADICIONADO MARGEM INFERIOR MAIOR AO ÚLTIMO ITEM DA LISTA */
+        }
+
         /* Estilo da Imagem da Seção Principal */
         .page-image {
             width: 100%;
-            height: 400px; 
-            object-fit: cover; 
+            height: 400px;
+            object-fit: cover;
             border-radius: 12px;
             margin-bottom: 40px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-            /* Usando a imagem que você já tinha no GitHub, image_0cd7e4.png, para esta seção */
-            background-image: url('image_0cd7e4.png'); /* Ou outra imagem que você tenha no GitHub para a seção principal */
+            background-image: url('image_0cd7e4.png'); /* Certifique-se de que esta imagem está no seu GitHub */
             background-size: cover;
             background-position: center;
         }
-        
+
         /* Chamada para Ação (CTA) */
         .call-to-action {
             text-align: center;
@@ -333,6 +336,9 @@
                 left: 0;
                 font-size: 1.4rem;
             }
+            ul li:last-child {
+                margin-bottom: 30px; /* Ajuste para telas menores */
+            }
             .page-image {
                 height: 250px;
             }
@@ -374,8 +380,14 @@
             ul li::before {
                 font-size: 1.2rem;
             }
+            ul li:last-child {
+                margin-bottom: 20px; /* Ajuste para telas menores */
+            }
             .page-image {
                 height: 180px;
+            }
+            .call-to-action {
+                padding: 30px 20px;
             }
             .call-to-action p {
                 font-size: 1.3rem;
