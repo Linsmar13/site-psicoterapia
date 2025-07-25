@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Psicoterapia Positiva - Bem-Estar e Crescimento Pessoal</title>
+    <title>TREINAMENTO PABE: Práticas, Atitude e Bem-Estar</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Cores Base - Paleta de Beges e Marrons Ajustada */
+        /* Cores Neutras e Profissionais para PABE */
         :root {
-            --primary-bg-light: #fdfaf5; /* Fundo principal mais claro, quase creme */
-            --secondary-bg-soft: #f5edde; /* Fundo secundário suave para seções de destaque */
-            --text-dark-brown: #5a4b41; /* Marrom escuro para títulos e textos importantes */
-            --text-medium-grey: #6b6b6b; /* Cinza médio para parágrafos gerais */
-            --text-light-grey: #9a9a9a; /* Cinza claro para rodapé */
-            --accent-gold: #c69c6d; /* Um dourado suave para detalhes e destaques */
-            --border-light: #e0e0e0; /* Borda cinza bem clara */
+            --primary-bg: #f9f9f9; /* Fundo principal muito claro, quase branco */
+            --secondary-bg: #ececec; /* Fundo secundário para seções de destaque, um cinza claro */
+            --text-dark: #333333; /* Texto principal escuro */
+            --text-medium: #555555; /* Texto secundário */
+            --text-light: #888888; /* Texto mais suave, como rodapé */
+            --accent-color: #6a8e7e; /* Verde acinzentado suave para destaques */
+            --border-color: #dddddd; /* Borda cinza clara */
+            --white: #ffffff; /* Branco puro */
         }
 
         /* Reset Básico e Fontes */
         body {
             font-family: 'Open Sans', sans-serif;
-            background: var(--primary-bg-light);
-            color: var(--text-medium-grey);
+            background: var(--primary-bg);
+            color: var(--text-medium);
             margin: 0;
             padding: 0;
             line-height: 1.7;
@@ -35,8 +36,8 @@
 
         /* Cabeçalho e Título Principal */
         header {
-            background-color: var(--secondary-bg-soft);
-            color: var(--text-dark-brown);
+            background-color: var(--secondary-bg);
+            color: var(--text-dark);
             text-align: center;
             padding: 50px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -45,18 +46,27 @@
         header h1 {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            font-size: 4.5rem;
-            letter-spacing: 2px;
+            font-size: 4rem; /* Um pouco menor para caber melhor */
+            letter-spacing: 1.5px;
             font-weight: 800;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.08);
+            line-height: 1.2; /* Ajuste para multilinhas */
         }
+        header h1 span {
+            display: block; /* Quebra a linha para o subtítulo */
+            font-size: 1.8rem; /* Tamanho menor para o "Práticas, Atitude e Bem-Estar" */
+            font-weight: 600;
+            margin-top: 10px;
+            color: var(--text-medium);
+        }
+
 
         /* Navegação */
         nav {
-            background-color: #ffffff; /* Branco puro para a navegação */
+            background-color: var(--white);
             text-align: center;
             padding: 18px 0;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-color);
             box-shadow: 0 1px 3px rgba(0,0,0,0.02);
             position: sticky;
             top: 0;
@@ -64,10 +74,10 @@
         }
 
         nav a {
-            color: var(--text-dark-brown);
+            color: var(--text-dark);
             text-decoration: none;
             padding: 12px 25px;
-            margin: 0 10px;
+            margin: 0 15px; /* Espaço maior entre os links */
             border-radius: 30px;
             transition: background-color 0.3s ease, color 0.3s ease;
             font-weight: 700;
@@ -76,15 +86,15 @@
         }
 
         nav a:hover {
-            background-color: var(--primary-bg-light);
-            color: var(--text-dark-brown);
+            background-color: var(--secondary-bg);
+            color: var(--text-dark);
         }
 
         /* Seções de Conteúdo */
         section {
             margin-bottom: 60px;
             padding: 50px 0;
-            background-color: #ffffff; /* Branco puro para as seções */
+            background-color: var(--white);
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.05);
             margin-top: 40px;
@@ -93,7 +103,7 @@
 
         section h2 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark-brown);
+            color: var(--text-dark);
             font-size: 3rem;
             text-align: center;
             margin-bottom: 30px;
@@ -106,18 +116,18 @@
             display: block;
             width: 100px;
             height: 4px;
-            background-color: var(--accent-gold);
+            background-color: var(--accent-color);
             margin: 15px auto 0;
             border-radius: 2px;
         }
 
         section h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark-brown);
-            font-size: 2.2rem; /* Tamanho padronizado */
+            color: var(--text-dark);
+            font-size: 2.2rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            border-left: 6px solid var(--accent-gold);
+            border-left: 6px solid var(--accent-color);
             padding-left: 20px;
             text-align: left;
             display: inline-block;
@@ -126,7 +136,7 @@
 
         p {
             font-size: 1.3rem;
-            color: var(--text-medium-grey);
+            color: var(--text-medium);
             margin-bottom: 20px;
             text-align: center;
             display: inline-block;
@@ -145,7 +155,7 @@
             margin-bottom: 18px;
             position: relative;
             font-size: 1.25rem;
-            color: var(--text-medium-grey);
+            color: var(--text-medium);
             display: inline-block;
             text-align: left;
             max-width: 500px;
@@ -156,13 +166,13 @@
             position: absolute;
             left: 0;
             top: 0;
-            color: var(--accent-gold);
+            color: var(--accent-color);
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
         }
 
-        /* Imagens - AGORA COM CAMINHOS LOCAIS! */
+        /* Imagens - Mantendo caminhos locais e estilos */
         .hero-image, .section-image {
             width: 100%;
             height: 400px;
@@ -173,13 +183,12 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
         }
 
+        /* Imagens apontando para os nomes de arquivo fornecidos */
         .hero-image {
-            /* Caminho local para a primeira imagem */
-            background-image: url('image_0cd7e4.png');
+            background-image: url('image_0cd7e4.png'); 
         }
 
         .growth-image {
-            /* Caminho local para a segunda imagem */
             background-image: url('image_0cd807.png');
         }
 
@@ -188,8 +197,8 @@
             text-align: center;
             margin-top: 80px;
             padding: 60px 40px;
-            background-color: var(--secondary-bg-soft);
-            color: var(--text-dark-brown);
+            background-color: var(--secondary-bg);
+            color: var(--text-dark);
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
@@ -198,13 +207,13 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: var(--text-dark-brown);
+            color: var(--text-dark);
             font-weight: 700;
         }
 
         .btn-whatsapp {
             display: inline-block;
-            background-color: #25d366; /* Mantive o verde do WhatsApp para o ícone ser reconhecível */
+            background-color: #25d366; /* Verde do WhatsApp */
             color: white;
             padding: 20px 45px;
             border-radius: 40px;
@@ -225,16 +234,22 @@
             text-align: center;
             padding: 40px;
             font-size: 1rem;
-            color: var(--text-light-grey);
-            border-top: 1px solid var(--border-light);
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
             margin-top: 80px;
-            background-color: #ffffff; /* Branco puro para o rodapé */
+            background-color: var(--white);
         }
 
         /* Responsividade */
         @media (max-width: 992px) {
             .container {
                 padding: 0 40px;
+            }
+            header h1 {
+                font-size: 3.5rem;
+            }
+            header h1 span {
+                font-size: 1.6rem;
             }
         }
 
@@ -243,7 +258,10 @@
                 padding: 0 20px;
             }
             header h1 {
-                font-size: 3rem;
+                font-size: 2.8rem;
+            }
+            header h1 span {
+                font-size: 1.4rem;
             }
             nav {
                 padding: 12px 0;
@@ -253,74 +271,75 @@
                 margin: 10px auto;
                 padding: 10px 20px;
                 font-size: 1rem;
-                max-width: 250px;
+                max-width: 200px; /* Reduz a largura máxima dos links na nav */
             }
             section {
                 padding: 40px 15px;
                 margin-top: 25px;
             }
             section h2 {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
             }
             section h3 {
-                font-size: 2.2rem; /* Tamanho padronizado */
+                font-size: 1.8rem;
                 text-align: left;
                 display: block;
             }
             p, ul li {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
                 text-align: center;
             }
             ul li {
-                max-width: 90%;
+                max-width: 95%; /* Ajuste para telas menores */
+                padding-left: 35px; /* Reduz o padding para o checkmark */
             }
             ul li::before {
-                left: calc(50% - 190px);
-                color: var(--accent-gold);
+                left: 0; /* Alinha o checkmark ao início do padding-left */
+                font-size: 1.4rem;
             }
             .hero-image, .section-image {
-                height: 300px;
+                height: 250px; /* Reduz a altura das imagens */
             }
             .call-to-action {
-                padding: 40px 20px;
+                padding: 30px 20px;
             }
             .call-to-action p {
-                font-size: 1.8rem;
-                color: var(--text-dark-brown);
+                font-size: 1.6rem;
             }
             .btn-whatsapp {
-                font-size: 1.4rem;
-                padding: 16px 32px;
+                font-size: 1.2rem;
+                padding: 14px 28px;
             }
         }
 
         @media (max-width: 480px) {
             header h1 {
-                font-size: 2.5rem;
-            }
-            section h2 {
                 font-size: 2rem;
             }
+            header h1 span {
+                font-size: 1.1rem;
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
             section h3 {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
             p, ul li {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
             ul li::before {
-                left: calc(50% - 160px);
-                color: var(--accent-gold);
+                font-size: 1.2rem;
             }
             .hero-image, .section-image {
-                height: 200px;
+                height: 180px;
             }
             .call-to-action p {
-                font-size: 1.5rem;
-                color: var(--text-dark-brown);
+                font-size: 1.3rem;
             }
             .btn-whatsapp {
-                font-size: 1.1rem;
-                padding: 12px 25px;
+                font-size: 1rem;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -329,77 +348,40 @@
 
 <header>
     <div class="container">
-        <h1>Psicoterapia Positiva</h1>
+        <h1>TREINAMENTO PABE<span>Práticas, Atitude e Bem-Estar</span></h1>
     </div>
 </header>
 
 <nav>
     <div class="container">
         <a href="#inicio">Início</a>
-        <a href="#treinamento-grupo">Treinamento em Grupo</a>
-        <a href="#terapia-individual">Terapia Individual</a>
         <a href="#contato">Contato</a>
     </div>
 </nav>
 
 <section id="inicio" class="container">
     <div class="hero-image"></div>
-    <h2>🌟 Psicologia Positiva na Prática!</h2>
+    <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
     <p>
-        A Psicoterapia Positiva é uma abordagem focada em fortalecer suas virtudes, emoções positivas e propósito de vida. Aqui, você encontra um espaço seguro e acolhedor para desenvolver sua saúde mental, bem-estar e qualidade de vida.
+        O **TREINAMENTO PABE** é uma jornada transformadora focada em te equipar com **Práticas** eficientes, fortalecer sua **Atitude** positiva e promover um profundo **Bem-Estar**. Descubra um espaço de aprendizado e desenvolvimento para aplicar a Psicologia Positiva no seu dia a dia.
     </p>
     <p>
-        Quer saber se um treinamento em grupo ou a terapia individual é o caminho ideal para você? Continue lendo e descubra como podemos te ajudar a florescer.
-    </p>
-</section>
-
-<section id="treinamento-grupo" class="container">
-    <h2>💛 O que é um treinamento de Psicologia Positiva?</h2>
-    <p>
-        É um espaço seguro, acolhedor e transformador, onde você aprende, compartilha e desenvolve forças internas para viver com mais bem-estar, propósito e realização. Nossos treinamentos são desenhados para proporcionar uma experiência de crescimento coletivo e significativo.
+        Neste treinamento, você aprenderá a identificar e utilizar suas forças de caráter, cultivar emoções positivas e construir um propósito de vida mais significativo. É um convite para você florescer em todas as áreas da sua vida.
     </p>
     <div class="section-image growth-image"></div>
-    <h3>🌱 Vantagens do treinamento em grupo</h3> <ul>
-        <li>Conexão genuína com outras pessoas que buscam o mesmo crescimento</li>
-        <li>Trocas enriquecedoras de experiências e perspectivas diversas</li>
-        <li>Sensação de pertencimento e apoio mútuo em sua jornada</li>
-        <li>Acesso a ferramentas práticas e exercícios de bem-estar comprovados</li>
-        <li>Custo mais acessível em comparação com a terapia individual</li>
+    <h3>🌿 O que você vai desenvolver no TREINAMENTO PABE</h3>
+    <ul>
+        <li>Aprender técnicas e exercícios para aumentar o bem-estar diário</li>
+        <li>Desenvolver uma mentalidade de crescimento e resiliência</li>
+        <li>Identificar e potencializar suas forças pessoais</li>
+        <li>Cultivar gratidão, otimismo e esperança</li>
+        <li>Construir relacionamentos mais positivos e significativos</li>
+        <li>Encontrar e viver com mais propósito e significado</li>
     </ul>
 </section>
 
-<section id="terapia-individual" class="container">
-    <h2>🧠 E a terapia individual?</h2>
-    <p>
-        A terapia individual é um espaço exclusivo e profundo de autoconhecimento, ideal para quem precisa lidar com questões pessoais mais sensíveis ou específicas. É um caminho personalizado onde o foco é totalmente em suas necessidades e desafios, guiado por um profissional dedicado.
-    </p>
-    <p>
-        Aqui, você tem a oportunidade de explorar suas emoções, pensamentos e padrões de comportamento em um ambiente confidencial, buscando insights e desenvolvendo estratégias para superar obstáculos e alcançar uma vida mais plena e com mais significado.
-    </p>
-</section>
-
-<section id="escolha" class="container">
-    <h2>💬 Mas qual é o ideal pra mim?</h2>
-    <p>
-        Não é uma escolha “certa” ou “errada”, mas sim o que melhor se adapta ao seu momento e objetivos atuais. Ambas as abordagens são poderosas e podem transformar sua vida de maneiras únicas.
-    </p>
-    <p>
-        <strong>→ O treinamento em grupo é excelente</strong> para quem busca crescimento pessoal, motivação, leveza no dia a dia, e deseja aprender novas ferramentas em um ambiente de apoio coletivo e inspirador.
-    </p>
-    <p>
-        <strong>→ A terapia individual é ideal</strong> quando há dores emocionais mais profundas, questões específicas a serem trabalhadas, traumas ou a necessidade de uma atenção individualizada e confidencial para explorar e resolver desafios pessoais complexos.
-    </p>
-</section>
-
-<section class="container">
-    <h2>🌸 Juntas, essas experiências se complementam.</h2>
-    <p>
-        Você não precisa escolher apenas uma! Muitas pessoas encontram um grande benefício ao fazer terapia individual e também participar de um grupo, pois as experiências se enriquecem mutuamente. Ambas são formas potentes de cuidar de você e investir no seu bem-estar e desenvolvimento contínuo.
-    </p>
-</section>
-
 <section id="contato" class="call-to-action container">
-    <p>✨ Quer dar o primeiro passo com mais leveza e acolhimento?</p>
+    <p>✨ Pronto para iniciar sua jornada PABE?</p>
     <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
         Fale Conosco pelo WhatsApp
     </a>
@@ -408,7 +390,7 @@
 
 <footer>
     <div class="container">
-        &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
+        &copy; 2025 TREINAMENTO PABE - Todos os direitos reservados
     </div>
 </footer>
 
