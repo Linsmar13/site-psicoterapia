@@ -31,6 +31,11 @@
             line-height: 1.7;
         }
 
+        /* Evita o scroll do corpo quando o menu mobile está aberto */
+        body.no-scroll {
+            overflow: hidden;
+        }
+
         .container {
             max-width: 960px;
             margin: 0 auto;
@@ -48,6 +53,7 @@
             flex-direction: column; 
             align-items: center; /* Centraliza os itens horizontalmente */
             justify-content: center; /* Centraliza os itens verticalmente */
+            position: relative; /* Importante para posicionar o botão do hambúrguer */
         }
 
         .header-content {
@@ -85,9 +91,8 @@
             text-align: center;
         }
 
-
-        /* Navegação */
-        nav {
+        /* Navegação para Desktop (fixa no topo) */
+        #desktop-nav {
             background-color: var(--white);
             text-align: center;
             padding: 18px 0;
@@ -98,7 +103,12 @@
             z-index: 1000;
         }
 
-        nav a {
+        #desktop-nav .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #desktop-nav a {
             color: var(--text-dark);
             text-decoration: none;
             padding: 12px 25px;
@@ -110,15 +120,116 @@
             font-size: 1.1rem;
         }
 
-        nav a:hover {
+        #desktop-nav a:hover {
             background-color: var(--secondary-bg);
             color: var(--text-dark);
+        }
+
+        /* Botão do Hambúrguer (para Mobile/Tablet) */
+        .hamburger-menu {
+            display: none; /* Escondido por padrão em desktop */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0; /* Remove padding padrão do botão */
+            width: 30px;
+            height: 24px; /* Altura para 3 barras com espaçamento */
+            position: absolute; /* Posiciona relativo ao header */
+            top: 50px; /* Ajusta verticalmente */
+            right: 20px; /* Distância da borda direita */
+            z-index: 1001; /* Garante que fique acima de outros elementos */
+            flex-direction: column; /* Coloca as barras uma embaixo da outra */
+            justify-content: space-between; /* Espaçamento entre as barras */
+        }
+
+        .hamburger-menu .bar {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--text-dark);
+            transition: all 0.3s ease-in-out; /* Transição suave para a animação */
+        }
+
+        /* Animação do botão hambúrguer para um 'X' ao abrir */
+        .hamburger-menu.open .bar:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .hamburger-menu.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.open .bar:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        /* Navegação Mobile (Menu Deslizante) */
+        #mobile-nav {
+            position: fixed; /* Fixa na tela */
+            top: 0;
+            right: -280px; /* Inicia fora da tela, à direita (largura do menu + um pouco para garantir) */
+            width: 250px; /* Largura do menu deslizante */
+            height: 100%; /* Ocupa a altura total da tela */
+            background-color: var(--white);
+            box-shadow: -4px 0 15px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transição suave */
+            z-index: 999; /* Fica abaixo do botão hambúrguer (se visível) */
+            padding-top: 80px; /* Espaço no topo para o botão de fechar e conteúdo */
+            display: flex; /* Para alinhar os links verticalmente */
+            flex-direction: column;
+            align-items: center; /* Centraliza os links */
+        }
+
+        #mobile-nav.open {
+            right: 0; /* Desliza para dentro da tela */
+        }
+
+        #mobile-nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 15px 0; /* Espaçamento interno dos links */
+            width: 80%; /* Largura dos links dentro do menu */
+            text-align: center;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border-color); /* Linha divisória entre os links */
+        }
+        #mobile-nav a:last-child {
+            border-bottom: none; /* Remove a linha do último link */
+        }
+
+        /* Botão de Fechar no Menu Mobile (um "X") */
+        .close-menu {
+            display: none; /* Escondido por padrão em desktop */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-dark);
+            z-index: 1000; /* Garante que seja clicável */
+        }
+
+        /* Overlay Escuro */
+        .overlay {
+            display: none; /* Escondido por padrão */
+            position: fixed; /* Fixo na tela */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+            z-index: 998; /* Fica abaixo do menu mobile */
+        }
+        .overlay.active {
+            display: block; /* Mostra o overlay quando o menu está aberto */
         }
 
         /* Seções de Conteúdo */
         section {
             margin-bottom: 60px;
-            padding: 30px 0 80px 0; 
+            padding: 30px 0 30px 0; 
             background-color: var(--white);
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.05);
@@ -216,7 +327,7 @@
         .call-to-action p {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
-            margin-bottom: 10px; /* ALTERADO AQUI: Reduzido de 20px para 10px */
+            margin-bottom: 10px; 
             color: var(--subtitle-color);
             font-weight: 700;
         }
@@ -296,6 +407,16 @@
         }
 
         @media (max-width: 768px) {
+            #desktop-nav {
+                display: none; /* Esconde a navegação de desktop */
+            }
+            .hamburger-menu {
+                display: flex; /* Mostra o botão hambúrguer */
+            }
+            .close-menu {
+                display: block; /* Mostra o botão de fechar no menu mobile */
+            }
+
             .container {
                 padding: 0 20px;
             }
@@ -311,18 +432,8 @@
                 font-size: 1.1rem;
                 margin-top: 10px;
             }
-            nav {
-                padding: 12px 0;
-            }
-            nav a {
-                display: block;
-                margin: 10px auto;
-                padding: 10px 20px;
-                font-size: 1rem;
-                max-width: 200px;
-            }
             section {
-                padding: 20px 15px 40px 15px; 
+                padding: 20px 15px 20px 15px; 
                 margin-top: 25px;
             }
             section h2 {
@@ -416,15 +527,28 @@
     <div class="container header-content">
         <h1>TREINAMENTO PABE<span>Práticas &gt; Atitude &gt; Bem-Estar</span></h1> 
         <p class="trainers-names">Waleska Cruz e Cybele Lassandro</p>
+        <button class="hamburger-menu" aria-label="Abrir Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </div>
 </header>
 
-<nav>
+<nav id="desktop-nav">
     <div class="container">
         <a href="#top-of-page">Início</a>
         <a href="#contato">Contato</a>
     </div>
 </nav>
+
+<nav id="mobile-nav">
+    <button class="close-menu" aria-label="Fechar Menu">X</button>
+    <a href="#top-of-page">Início</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="overlay" id="menu-overlay"></div>
 
 <section class="container">
     <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
@@ -465,6 +589,47 @@
         &copy; 2025 TREINAMENTO PABE - Todos os direitos reservados
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.querySelector('.hamburger-menu');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('menu-overlay');
+        const closeMenuBtn = document.querySelector('.close-menu');
+
+        function toggleMenu() {
+            mobileNav.classList.toggle('open'); // Adiciona/remove a classe 'open' no menu mobile
+            hamburgerBtn.classList.toggle('open'); // Adiciona/remove a classe 'open' no botão hambúrguer para animação
+            overlay.classList.toggle('active'); // Mostra/esconde o overlay
+            document.body.classList.toggle('no-scroll'); // Previne o scroll do corpo
+        }
+
+        // Eventos de clique para abrir/fechar
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+
+        // Fecha o menu quando um link do menu mobile é clicado
+        const mobileNavLinks = mobileNav.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (mobileNav.classList.contains('open')) {
+                    toggleMenu(); // Fecha o menu
+                }
+            });
+        });
+
+        // Garante que o menu mobile e o overlay estejam ocultos se a tela for redimensionada para desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) { // Se a largura da tela for maior que o breakpoint mobile
+                if (mobileNav.classList.contains('open')) {
+                    toggleMenu(); // Fecha o menu se estiver aberto
+                }
+                document.body.classList.remove('no-scroll'); // Garante que o scroll esteja habilitado
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
