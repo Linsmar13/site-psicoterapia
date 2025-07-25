@@ -59,10 +59,14 @@
             max-width: 100%; /* Garante que não ultrapasse a largura do contêiner */
         }
 
-        .header-logo {
-            width: 100px; /* Ajuste o tamanho da logo conforme necessário */
-            height: 100px;
-            object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+        /* ESTILO PARA A LOGO COMO BACKGROUND-IMAGE */
+        .header-logo-bg {
+            width: 100px; /* Largura da div que conterá a imagem */
+            height: 100px; /* Altura da div que conterá a imagem */
+            background-image: url('Logo PABE.jpg'); /* <<<< NOME DO ARQUIVO COM L MAIÚSCULO, P MAIÚSCULO E ESPAÇO */
+            background-size: contain; /* Ajusta a imagem para caber na div */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            background-position: center; /* Centraliza a imagem na div */
             margin-bottom: 0; /* Remove margem inferior padrão */
         }
 
@@ -82,7 +86,7 @@
             font-size: 1.8rem;
             font-weight: 600;
             margin-top: 10px;
-            color: var(--main-title-color); /* <<<< COR DO SUBTÍTULO DO CABEÇALHO */
+            color: var(--main-title-color);
             white-space: nowrap; /* Tenta manter o subtítulo em uma linha, se possível */
         }
 
@@ -193,14 +197,14 @@
             position: absolute;
             left: 0;
             top: 0;
-            color: var(--subtitle-color); /* <<<< CORRIGIDO PARA --subtitle-color */
+            color: var(--subtitle-color);
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
         }
 
         ul li:last-child {
-            margin-bottom: 40px; /* <<<< ADICIONADO MARGEM INFERIOR MAIOR AO ÚLTIMO ITEM DA LISTA */
+            margin-bottom: 40px; /* Espaço maior após o último item da lista */
         }
 
         /* Estilo da Imagem da Seção Principal */
@@ -211,7 +215,7 @@
             border-radius: 12px;
             margin-bottom: 40px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-            background-image: url('image_0cd7e4.png'); /* Certifique-se de que esta imagem está no seu GitHub */
+            background-image: url('image_0cd7e4.png'); /* <<<< Certifique-se de que esta imagem está na raiz do seu GitHub */
             background-size: cover;
             background-position: center;
         }
@@ -275,7 +279,7 @@
             header h1 span {
                 font-size: 1.6rem;
             }
-            .header-logo {
+            .header-logo-bg { /* Ajuste para a nova classe da logo */
                 width: 80px;
                 height: 80px;
             }
@@ -293,7 +297,7 @@
                 font-size: 1.4rem;
                 white-space: normal;
             }
-            .header-logo {
+            .header-logo-bg { /* Ajuste para a nova classe da logo */
                 width: 70px;
                 height: 70px;
             }
@@ -364,7 +368,7 @@
             header h1 span {
                 font-size: 1.1rem;
             }
-            .header-logo {
+            .header-logo-bg { /* Ajuste para a nova classe da logo */
                 width: 60px;
                 height: 60px;
             }
@@ -403,7 +407,7 @@
 
 <header>
     <div class="container header-content">
-        <img src="logo-pabe.jpg" alt="Logo Treinamento PABE" class="header-logo"> 
+        <div class="header-logo-bg"></div> 
         <h1>TREINAMENTO PABE<span>Práticas, Atitude e Bem-Estar</span></h1> 
     </div>
 </header>
