@@ -1,353 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Psicoterapia Positiva - Bem-Estar e Crescimento Pessoal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Cores Base */
-    :root {
-      --primary-color: #2c7a7b; /* Verde-azulado principal */
-      --secondary-color: #285e61; /* Verde-azulado mais escuro */
-      --accent-color: #f3d41f; /* Amarelo para destaque */
-      --text-dark: #333;
-      --text-medium: #444;
-      --text-light: #666;
-      --bg-light: #f9fdfb; /* Fundo muito claro */
-      --bg-card: #ffffff;
-      --border-color: #ddd;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Psicoterapia Positiva - Bem-Estar e Crescimento Pessoal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Cores Base */
+        :root {
+            --primary-color: #2c7a7b; /* Verde-azulado principal */
+            --secondary-color: #285e61; /* Verde-azulado mais escuro */
+            --accent-color: #f3d41f; /* Amarelo para destaque */
+            --text-dark: #333;
+            --text-medium: #444;
+            --text-light: #666;
+            --bg-light: #f9fdfb; /* Fundo muito claro */
+            --bg-card: #ffffff;
+            --border-color: #ddd;
+        }
 
-    /* Reset Básico e Fontes */
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-medium);
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
+        /* Reset Básico e Fontes */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-medium);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7; /* Altura da linha para melhor leitura com fontes maiores */
+        }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+        .container {
+            max-width: 960px; /* Largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o container */
+            padding: 0 60px; /* MAIS ESPAÇO NAS LATERAIS: Aumentei o padding horizontal */
+        }
 
-    /* Cabeçalho e Navegação */
-    header {
-      background-color: var(--primary-color);
-      color: white;
-      text-align: center;
-      padding: 30px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+        /* Cabeçalho e Título Principal */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-    header h1 {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
-      letter-spacing: 1px;
-    }
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            letter-spacing: 2px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
 
-    nav {
-      background-color: #ffffff;
-      text-align: center;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--border-color);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        /* Navegação */
+        nav {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    nav a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      padding: 10px 20px;
-      margin: 0 8px;
-      border-radius: 25px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-weight: 600;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
-    }
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+        }
 
-    nav a:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
 
-    /* Seções de Conteúdo */
-    section {
-      margin-bottom: 50px;
-      padding: 40px 0;
-      background-color: var(--bg-card);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      margin-top: 30px;
-    }
+        /* Seções de Conteúdo */
+        section {
+            margin-bottom: 60px;
+            padding: 50px 0;
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            margin-top: 40px;
+            text-align: center; /* Centraliza o conteúdo da seção (blocos) */
+        }
 
-    section h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--secondary-color);
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 25px;
-      position: relative;
-      padding-bottom: 15px;
-    }
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--secondary-color);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 20px;
+        }
 
-    section h2::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 3px;
-      background-color: var(--primary-color);
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
 
-    section h3 {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--primary-color);
-      font-size: 1.8rem;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      border-left: 5px solid var(--accent-color);
-      padding-left: 15px;
-    }
+        section h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 6px solid var(--accent-color);
+            padding-left: 20px;
+            text-align: left; /* Subtítulos alinhados à esquerda */
+            display: inline-block; /* Permite que o h3 seja centralizado como um bloco */
+            max-width: 100%; /* Garante que não ultrapasse o container */
+        }
 
-    p {
-      font-size: 1.1rem;
-      color: var(--text-dark);
-      margin-bottom: 15px;
-      text-align: justify;
-    }
+        p {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: center; /* Parágrafos centralizados */
+            display: inline-block; /* Permite que o p seja centralizado como um bloco */
+            max-width: 800px; /* Limita a largura para melhor leitura quando centralizado */
+        }
 
-    /* Listas de Benefícios */
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 25px;
-    }
+        /* Listas de Benefícios Aprimoradas */
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+            text-align: center; /* Centraliza os LI's como blocos */
+        }
 
-    ul li {
-      padding-left: 35px;
-      margin-bottom: 15px;
-      position: relative;
-      font-size: 1.1rem;
-      color: var(--text-dark);
-    }
+        ul li {
+            padding-left: 45px; /* Espaço para o ícone */
+            margin-bottom: 18px;
+            position: relative;
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            display: inline-block; /* Faz com que o LI se comporte como bloco, mas seja centralizado pelo UL */
+            text-align: left; /* Alinha o texto DENTRO do LI à esquerda para leitura */
+            max-width: 500px; /* Limita a largura do item da lista */
+        }
 
-    ul li::before {
-      content: "✓"; /* Ícone de check para listas */
-      position: absolute;
-      left: 0;
-      color: var(--primary-color);
-      font-weight: bold;
-      font-size: 1.4rem;
-      line-height: 1;
-    }
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0; /* Alinha o ícone ao início do padding-left do LI */
+            top: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.6rem;
+            line-height: 1;
+        }
 
-    /* Imagens */
-    .hero-image, .section-image {
-      width: 100%;
-      height: 350px; /* Altura fixa para a imagem principal */
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+        /* Imagens */
+        .hero-image, .section-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
 
-    .hero-image {
-      background-image: url('http://googleusercontent.com/image_collection/image_retrieval/1341738089739618186_0'); /* Imagem de sala de terapia calma */
-    }
+        .hero-image {
+            background-image: url('https://images.unsplash.com/photo-1556761175-b413da4672af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1lZGl0YXRpb24lMjBzcGFjZXxlbnwwfHwwfHw0&auto=format&fit=crop&w=800&q=60'); /* Imagem de sala de terapia calma */
+        }
 
-    .growth-image {
-      background-image: url('http://googleusercontent.com/image_collection/image_retrieval/7059401320338783116_0'); /* Imagem de conceito de crescimento */
-    }
+        .growth-image {
+            background-image: url('https://images.unsplash.com/photo-1503777100072-77cb99004a8b?ixlib=rb-4.0.3&ixid=M3wxMjA0fDB8MHxzZWFyY2h8Nnx8Z3Jvd3RoJTIwY29uY2VwdHxlbnwwfHwwfHw0&auto=format&fit=crop&w=800&q=60'); /* Imagem de conceito de crescimento */
+        }
 
-    /* Chamada para Ação (CTA) */
-    .call-to-action {
-      text-align: center;
-      margin-top: 60px;
-      padding: 50px 30px;
-      background-color: var(--primary-color);
-      color: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    }
+        /* Chamada para Ação (CTA) */
+        .call-to-action {
+            text-align: center;
+            margin-top: 80px;
+            padding: 60px 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
 
-    .call-to-action p {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      color: white;
-      font-weight: 600;
-    }
+        .call-to-action p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: white;
+            font-weight: 700;
+        }
 
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: #25d366; /* Verde WhatsApp */
-      color: white;
-      padding: 18px 38px;
-      border-radius: 35px;
-      text-decoration: none;
-      font-size: 1.4rem;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      font-weight: 700;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 20px 45px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.6rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: 700;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    .btn-whatsapp:hover {
-      background-color: #1ebe57;
-      transform: translateY(-3px);
-    }
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            transform: translateY(-4px);
+        }
 
-    /* Rodapé */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: var(--text-light);
-      border-top: 1px solid var(--border-color);
-      margin-top: 60px;
-      background-color: var(--bg-card);
-    }
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 1rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+            margin-top: 80px;
+            background-color: var(--bg-card);
+        }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      nav {
-        padding: 10px 0;
-      }
-      nav a {
-        display: block;
-        margin: 8px auto;
-        padding: 8px 15px;
-        font-size: 0.9rem;
-        max-width: 200px;
-      }
-      section {
-        padding: 30px 15px;
-        margin-top: 20px;
-      }
-      section h2 {
-        font-size: 2rem;
-      }
-      section h3 {
-        font-size: 1.5rem;
-      }
-      p, ul li {
-        font-size: 1rem;
-      }
-      .hero-image, .section-image {
-        height: 250px;
-      }
-      .call-to-action {
-        padding: 30px 15px;
-      }
-      .call-to-action p {
-        font-size: 1.4rem;
-      }
-      .btn-whatsapp {
-        font-size: 1.2rem;
-        padding: 14px 28px;
-      }
-    }
-  </style>
+        /* Responsividade */
+        @media (max-width: 992px) { /* Ajuste para tablets */
+            .container {
+                padding: 0 40px; /* Diminui um pouco o padding lateral */
+            }
+            ul li::before {
+                left: calc(50% - 245px); /* Ajuste para telas menores que 992px */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px; /* Padding padrão para celular */
+            }
+            header h1 {
+                font-size: 3rem;
+            }
+            nav {
+                padding: 12px 0;
+            }
+            nav a {
+                display: block;
+                margin: 10px auto;
+                padding: 10px 20px;
+                font-size: 1rem;
+                max-width: 250px;
+            }
+            section {
+                padding: 40px 15px;
+                margin-top: 25px;
+            }
+            section h2 {
+                font-size: 2.4rem;
+            }
+            section h3 {
+                font-size: 1.8rem;
+                text-align: left; /* Subtítulos continuam à esquerda */
+                display: block; /* Volta a ser block para ocupar toda largura */
+            }
+            p, ul li {
+                font-size: 1.15rem;
+                text-align: center; /* Parágrafos e itens de lista centralizados */
+            }
+            ul li {
+                max-width: 90%; /* Ajusta a largura máxima para itens da lista em telas menores */
+            }
+            ul li::before {
+                left: calc(50% - 190px); /* Ajusta a posição do ícone em telas menores */
+            }
+            .hero-image, .section-image {
+                height: 300px;
+            }
+            .call-to-action {
+                padding: 40px 20px;
+            }
+            .call-to-action p {
+                font-size: 1.8rem;
+            }
+            .btn-whatsapp {
+                font-size: 1.4rem;
+                padding: 16px 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            section h3 {
+                font-size: 1.6rem;
+            }
+            p, ul li {
+                font-size: 1.05rem;
+            }
+            ul li::before {
+                left: calc(50% - 160px); /* Ajuste mais fino para telas muito pequenas */
+            }
+            .hero-image, .section-image {
+                height: 200px;
+            }
+            .call-to-action p {
+                font-size: 1.5rem;
+            }
+            .btn-whatsapp {
+                font-size: 1.1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="container">
-    <h1>Psicoterapia Positiva</h1>
-  </div>
+    <div class="container">
+        <h1>Psicoterapia Positiva</h1>
+    </div>
 </header>
 
 <nav>
-  <div class="container">
-    <a href="#inicio">Início</a>
-    <a href="#treinamento-grupo">Treinamento em Grupo</a>
-    <a href="#terapia-individual">Terapia Individual</a>
-    <a href="#contato">Contato</a>
-  </div>
+    <div class="container">
+        <a href="#inicio">Início</a>
+        <a href="#treinamento-grupo">Treinamento em Grupo</a>
+        <a href="#terapia-individual">Terapia Individual</a>
+        <a href="#contato">Contato</a>
+    </div>
 </nav>
 
 <section id="inicio" class="container">
-  <div class="hero-image"></div>
-  <h2>🌟 Psicologia Positiva na Prática!</h2>
-  <p>
-    A Psicoterapia Positiva é uma abordagem focada em fortalecer suas virtudes, emoções positivas e propósito de vida. Aqui, você encontra um espaço seguro e acolhedor para desenvolver sua saúde mental, bem-estar e qualidade de vida.
-  </p>
-  <p>
-    Quer saber se um treinamento em grupo ou a terapia individual é o caminho ideal para você? Continue lendo e descubra como podemos te ajudar a florescer.
-  </p>
+    <div class="hero-image"></div>
+    <h2>🌟 Psicologia Positiva na Prática!</h2>
+    <p>
+        A Psicoterapia Positiva é uma abordagem focada em fortalecer suas virtudes, emoções positivas e propósito de vida. Aqui, você encontra um espaço seguro e acolhedor para desenvolver sua saúde mental, bem-estar e qualidade de vida.
+    </p>
+    <p>
+        Quer saber se um treinamento em grupo ou a terapia individual é o caminho ideal para você? Continue lendo e descubra como podemos te ajudar a florescer.
+    </p>
 </section>
 
 <section id="treinamento-grupo" class="container">
-  <h2>💛 O que é um treinamento de Psicologia Positiva?</h2>
-  <p>
-    É um espaço seguro, acolhedor e transformador, onde você aprende, compartilha e desenvolve forças internas para viver com mais bem-estar, propósito e realização. Nossos treinamentos são desenhados para proporcionar uma experiência de crescimento coletivo e significativo.
-  </p>
-  <div class="section-image growth-image"></div>
-  <h3>🌱 Vantagens do treinamento em grupo:</h3>
-  <ul>
-    <li>Conexão genuína com outras pessoas que buscam o mesmo crescimento</li>
-    <li>Trocas enriquecedoras de experiências e perspectivas diversas</li>
-    <li>Sensação de pertencimento e apoio mútuo em sua jornada</li>
-    <li>Acesso a ferramentas práticas e exercícios de bem-estar comprovados</li>
-    <li>Custo mais acessível em comparação com a terapia individual</li>
-  </ul>
+    <h2>💛 O que é um treinamento de Psicologia Positiva?</h2>
+    <p>
+        É um espaço seguro, acolhedor e transformador, onde você aprende, compartilha e desenvolve forças internas para viver com mais bem-estar, propósito e realização. Nossos treinamentos são desenhados para proporcionar uma experiência de crescimento coletivo e significativo.
+    </p>
+    <div class="section-image growth-image"></div>
+    <h3>🌱 Vantagens do treinamento em grupo:</h3>
+    <ul>
+        <li>Conexão genuína com outras pessoas que buscam o mesmo crescimento</li>
+        <li>Trocas enriquecedoras de experiências e perspectivas diversas</li>
+        <li>Sensação de pertencimento e apoio mútuo em sua jornada</li>
+        <li>Acesso a ferramentas práticas e exercícios de bem-estar comprovados</li>
+        <li>Custo mais acessível em comparação com a terapia individual</li>
+    </ul>
 </section>
 
 <section id="terapia-individual" class="container">
-  <h2>🧠 E a terapia individual?</h2>
-  <p>
-    A terapia individual é um espaço exclusivo e profundo de autoconhecimento, ideal para quem precisa lidar com questões pessoais mais sensíveis ou específicas. É um caminho personalizado onde o foco é totalmente em suas necessidades e desafios, guiado por um profissional dedicado.
-  </p>
-  <p>
-    Aqui, você tem a oportunidade de explorar suas emoções, pensamentos e padrões de comportamento em um ambiente confidencial, buscando insights e desenvolvendo estratégias para superar obstáculos e alcançar uma vida mais plena e com mais significado.
-  </p>
+    <h2>🧠 E a terapia individual?</h2>
+    <p>
+        A terapia individual é um espaço exclusivo e profundo de autoconhecimento, ideal para quem precisa lidar com questões pessoais mais sensíveis ou específicas. É um caminho personalizado onde o foco é totalmente em suas necessidades e desafios, guiado por um profissional dedicado.
+    </p>
+    <p>
+        Aqui, você tem a oportunidade de explorar suas emoções, pensamentos e padrões de comportamento em um ambiente confidencial, buscando insights e desenvolvendo estratégias para superar obstáculos e alcançar uma vida mais plena e com mais significado.
+    </p>
 </section>
 
 <section id="escolha" class="container">
-  <h2>💬 Mas qual é o ideal pra mim?</h2>
-  <p>
-    Não é uma escolha “certa” ou “errada”, mas sim o que melhor se adapta ao seu momento e objetivos atuais. Ambas as abordagens são poderosas e podem transformar sua vida de maneiras únicas.
-  </p>
-  <p>
-    <strong>→ O treinamento em grupo é excelente</strong> para quem busca crescimento pessoal, motivação, leveza no dia a dia, e deseja aprender novas ferramentas em um ambiente de apoio coletivo e inspirador.
-  </p>
-  <p>
-    <strong>→ A terapia individual é ideal</strong> quando há dores emocionais mais profundas, questões específicas a serem trabalhadas, traumas ou a necessidade de uma atenção individualizada e confidencial para explorar e resolver desafios pessoais complexos.
-  </p>
+    <h2>💬 Mas qual é o ideal pra mim?</h2>
+    <p>
+        Não é uma escolha “certa” ou “errada”, mas sim o que melhor se adapta ao seu momento e objetivos atuais. Ambas as abordagens são poderosas e podem transformar sua vida de maneiras únicas.
+    </p>
+    <p>
+        <strong>→ O treinamento em grupo é excelente</strong> para quem busca crescimento pessoal, motivação, leveza no dia a dia, e deseja aprender novas ferramentas em um ambiente de apoio coletivo e inspirador.
+    </p>
+    <p>
+        <strong>→ A terapia individual é ideal</strong> quando há dores emocionais mais profundas, questões específicas a serem trabalhadas, traumas ou a necessidade de uma atenção individualizada e confidencial para explorar e resolver desafios pessoais complexos.
+    </p>
 </section>
 
 <section class="container">
-  <h2>🌸 Juntas, essas experiências se complementam.</h2>
-  <p>
-    Você não precisa escolher apenas uma! Muitas pessoas encontram um grande benefício ao fazer terapia individual e também participar de um grupo, pois as experiências se enriquecem mutuamente. Ambas são formas potentes de cuidar de você e investir no seu bem-estar e desenvolvimento contínuo.
-  </p>
+    <h2>🌸 Juntas, essas experiências se complementam.</h2>
+    <p>
+        Você não precisa escolher apenas uma! Muitas pessoas encontram um grande benefício ao fazer terapia individual e também participar de um grupo, pois as experiências se enriquecem mutuamente. Ambas são formas potentes de cuidar de você e investir no seu bem-estar e desenvolvimento contínuo.
+    </p>
 </section>
 
 <section id="contato" class="call-to-action container">
-  <p>✨ Quer dar o primeiro passo com mais leveza e acolhimento?</p>
-  <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
-    Fale Conosco pelo WhatsApp
-  </a>
-  <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(255,255,255,0.8);">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
+    <p>✨ Quer dar o primeiro passo com mais leveza e acolhimento?</p>
+    <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
+        Fale Conosco pelo WhatsApp
+    </a>
+    <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(255,255,255,0.8);">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
 </section>
 
 <footer>
-  <div class="container">
-    &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
-  </div>
+    <div class="container">
+        &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
+    </div>
 </footer>
 
 </body>
