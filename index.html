@@ -10,10 +10,13 @@
         :root {
             --primary-bg: #f9f9f9; /* Fundo principal muito claro, quase branco */
             --secondary-bg: #ececec; /* Fundo secundário para seções de destaque, um cinza claro */
-            --text-dark: #333333; /* Texto principal escuro */
-            --text-medium: #555555; /* Texto secundário */
+            --text-dark: #333333; /* Texto principal escuro (parágrafos) */
+            --text-medium: #555555; /* Texto secundário (parágrafos mais claros) */
             --text-light: #888888; /* Texto mais suave, como rodapé */
-            --accent-color: #6a8e7e; /* Verde acinzentado suave para destaques */
+            
+            --main-title-color: #8d7c6f; /* Cor do título principal (h1) */
+            --subtitle-color: #d8726a; /* Cor dos subtítulos (h2, h3) e acentos */
+
             --border-color: #dddddd; /* Borda cinza clara */
             --white: #ffffff; /* Branco puro */
         }
@@ -37,7 +40,7 @@
         /* Cabeçalho e Título Principal */
         header {
             background-color: var(--secondary-bg);
-            color: var(--text-dark);
+            color: var(--main-title-color); /* Usando a nova cor para o h1 */
             text-align: center;
             padding: 50px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -51,13 +54,14 @@
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.08);
             line-height: 1.2; /* Ajuste para multilinhas */
+            color: var(--main-title-color); /* Duplicando para garantir a aplicação */
         }
         header h1 span {
             display: block; /* Quebra a linha para o subtítulo */
             font-size: 1.8rem; /* Tamanho menor para o "Práticas, Atitude e Bem-Estar" */
             font-weight: 600;
             margin-top: 10px;
-            color: var(--text-medium);
+            color: var(--text-medium); /* Mantendo a cor secundária para este span, ou poderia ser --subtitle-color */
         }
 
 
@@ -103,7 +107,7 @@
 
         section h2 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark);
+            color: var(--subtitle-color); /* Usando a nova cor para os h2 */
             font-size: 3rem;
             text-align: center;
             margin-bottom: 30px;
@@ -116,18 +120,18 @@
             display: block;
             width: 100px;
             height: 4px;
-            background-color: var(--accent-color);
+            background-color: var(--subtitle-color); /* Ajustado para combinar com h2 */
             margin: 15px auto 0;
             border-radius: 2px;
         }
 
         section h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark);
+            color: var(--subtitle-color); /* Usando a nova cor para os h3 */
             font-size: 2.2rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            border-left: 6px solid var(--accent-color);
+            border-left: 6px solid var(--subtitle-color); /* Ajustado para combinar com h3 */
             padding-left: 20px;
             text-align: left;
             display: inline-block;
@@ -136,7 +140,7 @@
 
         p {
             font-size: 1.3rem;
-            color: var(--text-medium);
+            color: var(--text-dark); /* Texto principal dos parágrafos mais escuro */
             margin-bottom: 20px;
             text-align: center;
             display: inline-block;
@@ -155,7 +159,7 @@
             margin-bottom: 18px;
             position: relative;
             font-size: 1.25rem;
-            color: var(--text-medium);
+            color: var(--text-dark); /* Texto das listas mais escuro */
             display: inline-block;
             text-align: left;
             max-width: 500px;
@@ -166,22 +170,25 @@
             position: absolute;
             left: 0;
             top: 0;
-            color: var(--accent-color);
+            color: var(--subtitle-color); /* Ajustado para combinar com os subtítulos */
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
         }
 
-        /* Estilo da Imagem do Unsplash */
-        .unsplash-image {
+        /* Estilo da Imagem (usando a imagem local agora) */
+        .page-image { /* Nome de classe mais genérico para a imagem principal */
             width: 100%;
-            height: 400px; /* Ajuste conforme necessário */
-            object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+            height: 400px; 
+            object-fit: cover; 
             border-radius: 12px;
             margin-bottom: 40px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            background-image: url('image_0cd7e4.png'); /* Usando a imagem local */
+            background-size: cover;
+            background-position: center;
         }
-
+        
         /* Chamada para Ação (CTA) */
         .call-to-action {
             text-align: center;
@@ -197,7 +204,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: var(--text-dark);
+            color: var(--subtitle-color); /* A cor da CTA pode ser o subtitulo ou uma cor de destaque */
             font-weight: 700;
         }
 
@@ -287,7 +294,7 @@
                 left: 0;
                 font-size: 1.4rem;
             }
-            .unsplash-image {
+            .page-image { /* Usando a nova classe */
                 height: 250px;
             }
             .call-to-action {
@@ -321,7 +328,7 @@
             ul li::before {
                 font-size: 1.2rem;
             }
-            .unsplash-image {
+            .page-image { /* Usando a nova classe */
                 height: 180px;
             }
             .call-to-action p {
@@ -350,7 +357,7 @@
 </nav>
 
 <section id="inicio" class="container">
-    <img src="https://source.unsplash.com/800x400/?psychotherapy" alt="Psicoterapia" class="unsplash-image">
+    <div class="page-image"></div> 
 
     <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
     <p>
