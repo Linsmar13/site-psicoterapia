@@ -1,115 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Psicoterapia Positiva</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fdfb;
-      color: #333;
-      margin: 0;
-      padding: 0 20px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    header {
-      text-align: center;
-      padding: 40px 0 20px;
-      color: #2c7a7b;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    section h2 {
-      color: #285e61;
-      border-bottom: 2px solid #2c7a7b;
-      padding-bottom: 8px;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #444;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      padding-left: 25px;
-      margin-bottom: 12px;
-      position: relative;
-      font-size: 1.1rem;
-    }
-    ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #2c7a7b;
-      font-weight: bold;
-    }
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: #25d366;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease;
-      font-weight: 600;
-    }
-    .btn-whatsapp:hover {
-      background-color: #1ebe57;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #ddd;
-      margin-top: 60px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Psicoterapia Positiva - Treinamento em Grupo e Terapia Individual</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fdfb;
+      color: #333;
+      margin: 0;
+      padding: 0 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0 20px;
+      color: #2c7a7b;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    nav a {
+      color: #285e61;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background-color: #e6f1f0;
+    }
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: #285e61;
+      border-bottom: 2px solid #2c7a7b;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      font-size: 2rem;
+    }
+    section h3 {
+      color: #2c7a7b;
+      font-size: 1.5rem;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem; /* Um pouco menor para blocos de texto maiores */
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+    ul li {
+      padding-left: 30px; /* Aumenta o espaço para o ícone */
+      margin-bottom: 12px;
+      position: relative;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    ul li::before {
+      content: "✨"; /* Ícone de estrela para as listas */
+      position: absolute;
+      left: 0;
+      color: #f3d41f; /* Cor amarela para o brilho */
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+    .call-to-action {
+      text-align: center;
+      margin-top: 50px;
+      padding: 30px;
+      background-color: #e6f1f0; /* Fundo mais claro para destaque */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .call-to-action p {
+      font-size: 1.5rem;
+      color: #285e61;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 16px 32px; /* Aumentado um pouco o padding */
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.3rem; /* Aumentado um pouco a fonte */
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
+      transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    /* Adaptações para telas menores */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin: 0 5px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+      section h2 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      ul li {
+        font-size: 1rem;
+      }
+      .btn-whatsapp {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+      }
+      .call-to-action p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>Psicoterapia Positiva</h1>
+  <h1>Psicoterapia Positiva</h1>
 </header>
 
-<section>
-  <p>
-    A psicoterapia ajuda a melhorar sua saúde mental, emoções e qualidade de vida. Um espaço seguro para você crescer.
-  </p>
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#treinamento-grupo">Treinamento em Grupo</a>
+  <a href="#terapia-individual">Terapia Individual</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="inicio">
+  <h2>🌟 Psicologia Positiva na Prática!</h2>
+  <p>
+    A Psicoterapia Positiva é uma abordagem focada em fortalecer suas virtudes, emoções positivas e propósito de vida. Aqui, você encontra um espaço seguro e acolhedor para desenvolver sua saúde mental, bem-estar e qualidade de vida.
+  </p>
+  <p>
+    Quer saber se um treinamento em grupo ou a terapia individual é o caminho ideal para você? Continue lendo e descubra como podemos te ajudar a florescer.
+  </p>
+</section>
+
+<section id="treinamento-grupo">
+  <h2>💛 O que é um treinamento de Psicologia Positiva?</h2>
+  <p>
+    É um espaço seguro, acolhedor e transformador, onde você aprende, compartilha e desenvolve forças internas para viver com mais bem-estar, propósito e realização. Nossos treinamentos são desenhados para proporcionar uma experiência de crescimento coletivo e significativo.
+  </p>
+  <h3>🌱 Vantagens do treinamento em grupo:</h3>
+  <ul>
+    <li>Conexão com outras pessoas que buscam o mesmo crescimento</li>
+    <li>Trocas enriquecedoras de experiências e perspectivas</li>
+    <li>Sensação de pertencimento e apoio mútuo</li>
+    <li>Acesso a ferramentas práticas e exercícios de bem-estar</li>
+    <li>Custo mais acessível em comparação com a terapia individual</li>
+  </ul>
+</section>
+
+<section id="terapia-individual">
+  <h2>🧠 E a terapia individual?</h2>
+  <p>
+    A terapia individual é um espaço exclusivo e profundo de autoconhecimento, ideal para quem precisa lidar com questões pessoais mais sensíveis ou específicas. É um caminho personalizado onde o foco é totalmente em suas necessidades e desafios, guiado por um profissional dedicado.
+  </p>
+  <p>
+    Aqui, você tem a oportunidade de explorar suas emoções, pensamentos e padrões de comportamento em um ambiente confidencial, buscando insights e desenvolvendo estratégias para superar obstáculos e alcançar uma vida mais plena.
+  </p>
+</section>
+
+<section id="escolha">
+  <h2>💬 Mas qual é o ideal pra mim?</h2>
+  <p>
+    Não é uma escolha “certa” ou “errada”, mas sim o que melhor se adapta ao seu momento e objetivos atuais. Ambas as abordagens são poderosas e podem transformar sua vida.
+  </p>
+  <p>
+    <strong>→ O treinamento em grupo é excelente</strong> pra quem busca crescimento pessoal, motivação, leveza no dia a dia, e deseja aprender novas ferramentas em um ambiente de apoio coletivo.
+  </p>
+  <p>
+    <strong>→ A terapia individual é ideal</strong> quando há dores emocionais mais profundas, questões específicas a serem trabalhadas, traumas ou a necessidade de uma atenção individualizada e confidencial para explorar e resolver desafios pessoais complexos.
+  </p>
 </section>
 
 <section>
-  <h2>Benefícios da Psicoterapia</h2>
-  <ul>
-    <li>Autoconhecimento</li>
-    <li>Redução do estresse e ansiedade</li>
-    <li>Melhora da autoestima</li>
-    <li>Desenvolvimento emocional</li>
-  </ul>
+  <h2>🌸 Juntas, essas experiências se complementam.</h2>
+  <p>
+    Você não precisa escolher apenas uma! Muitas pessoas encontram um grande benefício ao fazer terapia individual e também participar de um grupo, pois as experiências se enriquecem mutuamente. Ambas são formas potentes de cuidar de você e investir no seu bem-estar.
+  </p>
 </section>
 
-<section>
-  <h2>Entre em contato</h2>
-  <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
-    WhatsApp
-  </a>
+<section id="contato" class="call-to-action">
+  <p>✨ Quer dar o primeiro passo com mais leveza e acolhimento?</p>
+  <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
+    Fale Conosco pelo WhatsApp
+  </a>
+  <p style="font-size: 0.9rem; margin-top: 15px; color: #555;">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
 </section>
 
 <footer>
-  &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
+  &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
 </footer>
 
 </body>
