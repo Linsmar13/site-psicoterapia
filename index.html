@@ -151,7 +151,7 @@
             list-style: none;
             padding-left: 0;
             margin-bottom: 30px;
-            text-align: center;
+            /* Remover text-align: center; do ul para alinhar os li à esquerda */
         }
 
         ul li {
@@ -160,15 +160,17 @@
             position: relative;
             font-size: 1.25rem;
             color: var(--text-dark); /* Texto das listas mais escuro */
-            display: inline-block;
-            text-align: left;
-            max-width: 500px;
+            display: block; /* Alterado de inline-block para block para que cada item ocupe uma linha */
+            text-align: left; /* Garante que o texto dentro do li se alinha à esquerda */
+            max-width: 500px; /* Mantém a largura máxima para leitura */
+            margin-left: auto; /* Centraliza o bloco do li na página */
+            margin-right: auto; /* Centraliza o bloco do li na página */
         }
 
         ul li::before {
             content: "✓";
             position: absolute;
-            left: 0;
+            left: 0; /* Alinha o checkmark ao início do padding-left */
             top: 0;
             color: var(--subtitle-color); /* Ajustado para combinar com os subtítulos */
             font-weight: bold;
@@ -284,11 +286,13 @@
             }
             p, ul li {
                 font-size: 1.1rem;
-                text-align: center;
+                /* text-align: left; não é necessário aqui, já definido no li */
             }
             ul li {
                 max-width: 95%;
                 padding-left: 35px;
+                margin-left: auto; /* Centraliza o bloco do li na página */
+                margin-right: auto; /* Centraliza o bloco do li na página */
             }
             ul li::before {
                 left: 0;
@@ -310,6 +314,9 @@
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 0 15px; /* Mais padding para telas pequenas */
+            }
             header h1 {
                 font-size: 2rem;
             }
