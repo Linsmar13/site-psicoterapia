@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TREINAMENTO PABE: Práticas &gt Atitude &gt Bem-Estar</title>
+    <title>TREINAMENTO PABE: Práticas, Atitude e Bem-Estar</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Cores Neutras e Profissionais para PABE */
@@ -172,24 +172,14 @@
             line-height: 1;
         }
 
-        /* Imagens - Mantendo caminhos locais e estilos */
-        .hero-image, .section-image {
+        /* Estilo da Imagem do Unsplash */
+        .unsplash-image {
             width: 100%;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
+            height: 400px; /* Ajuste conforme necessário */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
             border-radius: 12px;
             margin-bottom: 40px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-        }
-
-        /* Imagens apontando para os nomes de arquivo fornecidos */
-        .hero-image {
-            background-image: url('image_0cd7e4.png'); 
-        }
-
-        .growth-image {
-            background-image: url('image_0cd807.png');
         }
 
         /* Chamada para Ação (CTA) */
@@ -271,7 +261,7 @@
                 margin: 10px auto;
                 padding: 10px 20px;
                 font-size: 1rem;
-                max-width: 200px; /* Reduz a largura máxima dos links na nav */
+                max-width: 200px;
             }
             section {
                 padding: 40px 15px;
@@ -290,15 +280,15 @@
                 text-align: center;
             }
             ul li {
-                max-width: 95%; /* Ajuste para telas menores */
-                padding-left: 35px; /* Reduz o padding para o checkmark */
+                max-width: 95%;
+                padding-left: 35px;
             }
             ul li::before {
-                left: 0; /* Alinha o checkmark ao início do padding-left */
+                left: 0;
                 font-size: 1.4rem;
             }
-            .hero-image, .section-image {
-                height: 250px; /* Reduz a altura das imagens */
+            .unsplash-image {
+                height: 250px;
             }
             .call-to-action {
                 padding: 30px 20px;
@@ -331,7 +321,7 @@
             ul li::before {
                 font-size: 1.2rem;
             }
-            .hero-image, .section-image {
+            .unsplash-image {
                 height: 180px;
             }
             .call-to-action p {
@@ -360,7 +350,8 @@
 </nav>
 
 <section id="inicio" class="container">
-    <div class="hero-image"></div>
+    <img src="https://source.unsplash.com/800x400/?psychotherapy" alt="Psicoterapia" class="unsplash-image">
+
     <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
     <p>
         O **TREINAMENTO PABE** é uma jornada transformadora focada em te equipar com **Práticas** eficientes, fortalecer sua **Atitude** positiva e promover um profundo **Bem-Estar**. Descubra um espaço de aprendizado e desenvolvimento para aplicar a Psicologia Positiva no seu dia a dia.
@@ -368,7 +359,7 @@
     <p>
         Neste treinamento, você aprenderá a identificar e utilizar suas forças de caráter, cultivar emoções positivas e construir um propósito de vida mais significativo. É um convite para você florescer em todas as áreas da sua vida.
     </p>
-    <div class="section-image growth-image"></div>
+
     <h3>🌿 O que você vai desenvolver no TREINAMENTO PABE</h3>
     <ul>
         <li>Aprender técnicas e exercícios para aumentar o bem-estar diário</li>
