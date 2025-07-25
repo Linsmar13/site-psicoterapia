@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TREINAMENTO PABE: Práticas > Atitude > Bem-Estar</title>
+    <title>TREINAMENTO PABE: Práticas, Atitude e Bem-Estar</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Cores Neutras e Profissionais para PABE */
@@ -40,28 +40,50 @@
         /* Cabeçalho e Título Principal */
         header {
             background-color: var(--secondary-bg);
-            color: var(--main-title-color); /* Usando a nova cor para o h1 */
+            color: var(--main-title-color);
             text-align: center;
             padding: 50px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex; /* Adicionado para alinhar imagem e texto */
+            flex-direction: column; /* Coloca os itens em coluna por padrão */
+            align-items: center; /* Centraliza os itens horizontalmente */
+            justify-content: center; /* Centraliza os itens verticalmente */
+        }
+
+        .header-content {
+            display: flex; /* Para alinhar a imagem e o texto do título lado a lado */
+            align-items: center; /* Centraliza verticalmente a imagem e o texto */
+            justify-content: center; /* Centraliza horizontalmente */
+            flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+            gap: 20px; /* Espaçamento entre os itens */
+            max-width: 100%; /* Garante que não ultrapasse a largura do contêiner */
+        }
+
+        .header-logo {
+            width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+            height: 100px;
+            object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+            margin-bottom: 0; /* Remove margem inferior padrão */
         }
 
         header h1 {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
-            font-size: 4rem; /* Um pouco menor para caber melhor */
+            font-size: 4rem;
             letter-spacing: 1.5px;
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.08);
-            line-height: 1.2; /* Ajuste para multilinhas */
-            color: var(--main-title-color); /* Duplicando para garantir a aplicação */
+            line-height: 1.2;
+            color: var(--main-title-color);
+            text-align: left; /* Ajuste para o texto dentro do bloco */
         }
         header h1 span {
-            display: block; /* Quebra a linha para o subtítulo */
-            font-size: 1.8rem; /* Tamanho menor para o "Práticas, Atitude e Bem-Estar" */
+            display: block;
+            font-size: 1.8rem;
             font-weight: 600;
             margin-top: 10px;
-            color: var(--text-medium); /* Mantendo a cor secundária para este span, ou poderia ser --subtitle-color */
+            color: var(--text-medium);
+            white-space: nowrap; /* Tenta manter o subtítulo em uma linha, se possível */
         }
 
 
@@ -81,7 +103,7 @@
             color: var(--text-dark);
             text-decoration: none;
             padding: 12px 25px;
-            margin: 0 15px; /* Espaço maior entre os links */
+            margin: 0 15px;
             border-radius: 30px;
             transition: background-color 0.3s ease, color 0.3s ease;
             font-weight: 700;
@@ -107,7 +129,7 @@
 
         section h2 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--subtitle-color); /* Usando a nova cor para os h2 */
+            color: var(--subtitle-color);
             font-size: 3rem;
             text-align: center;
             margin-bottom: 30px;
@@ -120,18 +142,18 @@
             display: block;
             width: 100px;
             height: 4px;
-            background-color: var(--subtitle-color); /* Ajustado para combinar com h2 */
+            background-color: var(--subtitle-color);
             margin: 15px auto 0;
             border-radius: 2px;
         }
 
         section h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--subtitle-color); /* Usando a nova cor para os h3 */
+            color: var(--subtitle-color);
             font-size: 2.2rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            border-left: 6px solid var(--subtitle-color); /* Ajustado para combinar com h3 */
+            border-left: 6px solid var(--subtitle-color);
             padding-left: 20px;
             text-align: left;
             display: inline-block;
@@ -140,7 +162,7 @@
 
         p {
             font-size: 1.3rem;
-            color: var(--text-dark); /* Texto principal dos parágrafos mais escuro */
+            color: var(--text-dark);
             margin-bottom: 20px;
             text-align: center;
             display: inline-block;
@@ -151,7 +173,6 @@
             list-style: none;
             padding-left: 0;
             margin-bottom: 30px;
-            /* Remover text-align: center; do ul para alinhar os li à esquerda */
         }
 
         ul li {
@@ -159,34 +180,35 @@
             margin-bottom: 18px;
             position: relative;
             font-size: 1.25rem;
-            color: var(--text-dark); /* Texto das listas mais escuro */
-            display: block; /* Alterado de inline-block para block para que cada item ocupe uma linha */
-            text-align: left; /* Garante que o texto dentro do li se alinha à esquerda */
-            max-width: 500px; /* Mantém a largura máxima para leitura */
-            margin-left: auto; /* Centraliza o bloco do li na página */
-            margin-right: auto; /* Centraliza o bloco do li na página */
+            color: var(--text-dark);
+            display: block;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         ul li::before {
             content: "✓";
             position: absolute;
-            left: 0; /* Alinha o checkmark ao início do padding-left */
+            left: 0;
             top: 0;
-            color: var(--subtitle-color); /* Ajustado para combinar com os subtítulos */
+            color: var(--subtitle-color);
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
         }
 
-        /* Estilo da Imagem (usando a imagem local agora) */
-        .page-image { /* Nome de classe mais genérico para a imagem principal */
+        /* Estilo da Imagem da Seção Principal */
+        .page-image {
             width: 100%;
             height: 400px; 
             object-fit: cover; 
             border-radius: 12px;
             margin-bottom: 40px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-            background-image: url('image_0cd7e4.png'); /* Usando a imagem local */
+            /* Usando a imagem que você já tinha no GitHub, image_0cd7e4.png, para esta seção */
+            background-image: url('image_0cd7e4.png'); /* Ou outra imagem que você tenha no GitHub para a seção principal */
             background-size: cover;
             background-position: center;
         }
@@ -206,13 +228,13 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: var(--subtitle-color); /* A cor da CTA pode ser o subtitulo ou uma cor de destaque */
+            color: var(--subtitle-color);
             font-weight: 700;
         }
 
         .btn-whatsapp {
             display: inline-block;
-            background-color: #25d366; /* Verde do WhatsApp */
+            background-color: #25d366;
             color: white;
             padding: 20px 45px;
             border-radius: 40px;
@@ -250,6 +272,10 @@
             header h1 span {
                 font-size: 1.6rem;
             }
+            .header-logo {
+                width: 80px;
+                height: 80px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -258,9 +284,19 @@
             }
             header h1 {
                 font-size: 2.8rem;
+                text-align: center;
             }
             header h1 span {
                 font-size: 1.4rem;
+                white-space: normal;
+            }
+            .header-logo {
+                width: 70px;
+                height: 70px;
+            }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
             }
             nav {
                 padding: 12px 0;
@@ -286,19 +322,18 @@
             }
             p, ul li {
                 font-size: 1.1rem;
-                /* text-align: left; não é necessário aqui, já definido no li */
             }
             ul li {
                 max-width: 95%;
                 padding-left: 35px;
-                margin-left: auto; /* Centraliza o bloco do li na página */
-                margin-right: auto; /* Centraliza o bloco do li na página */
+                margin-left: auto;
+                margin-right: auto;
             }
             ul li::before {
                 left: 0;
                 font-size: 1.4rem;
             }
-            .page-image { /* Usando a nova classe */
+            .page-image {
                 height: 250px;
             }
             .call-to-action {
@@ -315,13 +350,17 @@
 
         @media (max-width: 480px) {
             .container {
-                padding: 0 15px; /* Mais padding para telas pequenas */
+                padding: 0 15px;
             }
             header h1 {
                 font-size: 2rem;
             }
             header h1 span {
                 font-size: 1.1rem;
+            }
+            .header-logo {
+                width: 60px;
+                height: 60px;
             }
             section h2 {
                 font-size: 1.8rem;
@@ -335,7 +374,7 @@
             ul li::before {
                 font-size: 1.2rem;
             }
-            .page-image { /* Usando a nova classe */
+            .page-image {
                 height: 180px;
             }
             .call-to-action p {
@@ -351,8 +390,9 @@
 <body>
 
 <header>
-    <div class="container">
-        <h1>TREINAMENTO PABE<span>Práticas &gt; Atitude &gt; Bem-Estar</span></h1>
+    <div class="container header-content">
+        <img src="logo-pabe.jpg" alt="Logo Treinamento PABE" class="header-logo"> 
+        <h1>TREINAMENTO PABE<span>Práticas, Atitude e Bem-Estar</span></h1> 
     </div>
 </header>
 
