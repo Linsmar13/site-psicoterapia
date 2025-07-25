@@ -205,7 +205,7 @@
         /* Chamada para Ação (CTA) */
         .call-to-action {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 50px; /* ALTERADO AQUI: Diminuído de 80px para 50px */
             padding: 60px 40px;
             background-color: var(--secondary-bg);
             color: var(--text-dark);
@@ -296,7 +296,7 @@
         }
 
         @media (max-width: 768px) {
-            /* **ALTERAÇÃO AQUI:** Oculta toda a navegação para mobile/tablet em pé */
+            /* Oculta toda a navegação para mobile/tablet em pé */
             nav { 
                 display: none; 
             }
@@ -319,6 +319,10 @@
             section {
                 padding: 20px 15px 20px 15px; 
                 margin-top: 25px;
+            }
+            /* **ALTERAÇÃO AQUI:** Ajusta a margem superior da CTA para telas pequenas */
+            .call-to-action {
+                margin-top: 40px; 
             }
             section h2 {
                 font-size: 2.2rem;
