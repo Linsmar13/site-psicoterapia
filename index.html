@@ -6,40 +6,37 @@
     <title>Psicoterapia Positiva - Bem-Estar e Crescimento Pessoal</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Cores Base - BEGE e MARROM */
+        /* Cores Base - Paleta de Beges e Marrons Ajustada */
         :root {
-            --primary-color: #f5f5dc; /* Bege claro principal (para fundo de seções de destaque) */
-            --secondary-color: #f0ead6; /* Um bege ligeiramente mais claro para subtileza */
-            --accent-color: #b8860b; /* Um dourado/bronze para destaques sutis como a borda do h3 */
-            --text-dark: #333; /* Cor para parágrafos gerais */
-            --text-medium: #444;
-            --text-light: #666;
-            --text-primary: #5c4033; /* Marrom escuro para títulos, links, elementos chave */
-            --bg-light: #fffafa; /* Fundo geral da página, muito claro */
-            --bg-card: #ffffff; /* Fundo dos "cartões" (seções) */
-            --border-color: #eee;
+            --primary-bg-light: #fdfaf5; /* Fundo principal mais claro, quase creme */
+            --secondary-bg-soft: #f5edde; /* Fundo secundário suave para seções de destaque */
+            --text-dark-brown: #5a4b41; /* Marrom escuro para títulos e textos importantes */
+            --text-medium-grey: #6b6b6b; /* Cinza médio para parágrafos gerais */
+            --text-light-grey: #9a9a9a; /* Cinza claro para rodapé */
+            --accent-gold: #c69c6d; /* Um dourado suave para detalhes e destaques */
+            --border-light: #e0e0e0; /* Borda cinza bem clara */
         }
 
         /* Reset Básico e Fontes */
         body {
             font-family: 'Open Sans', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-medium);
+            background: var(--primary-bg-light);
+            color: var(--text-medium-grey);
             margin: 0;
             padding: 0;
-            line-height: 1.7; /* Altura da linha para melhor leitura com fontes maiores */
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 960px; /* Largura máxima do conteúdo */
-            margin: 0 auto; /* Centraliza o container */
-            padding: 0 60px; /* MAIS ESPAÇO NAS LATERAIS: Aumentei o padding horizontal */
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
 
         /* Cabeçalho e Título Principal */
         header {
-            background-color: var(--primary-color); /* Fundo bege claro */
-            color: var(--text-primary); /* Título em marrom escuro */
+            background-color: var(--secondary-bg-soft);
+            color: var(--text-dark-brown);
             text-align: center;
             padding: 50px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -56,10 +53,10 @@
 
         /* Navegação */
         nav {
-            background-color: var(--bg-card); /* Fundo branco/creme */
+            background-color: #ffffff; /* Branco puro para a navegação */
             text-align: center;
             padding: 18px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-light);
             box-shadow: 0 1px 3px rgba(0,0,0,0.02);
             position: sticky;
             top: 0;
@@ -67,7 +64,7 @@
         }
 
         nav a {
-            color: var(--text-primary); /* Links em marrom escuro */
+            color: var(--text-dark-brown);
             text-decoration: none;
             padding: 12px 25px;
             margin: 0 10px;
@@ -79,24 +76,24 @@
         }
 
         nav a:hover {
-            background-color: var(--primary-color); /* Fundo bege claro no hover */
-            color: var(--text-dark); /* Texto mais escuro no hover */
+            background-color: var(--primary-bg-light);
+            color: var(--text-dark-brown);
         }
 
         /* Seções de Conteúdo */
         section {
             margin-bottom: 60px;
             padding: 50px 0;
-            background-color: var(--bg-card); /* Fundo branco/creme para os cartões das seções */
+            background-color: #ffffff; /* Branco puro para as seções */
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.05);
             margin-top: 40px;
-            text-align: center; /* Centraliza o conteúdo da seção (blocos) */
+            text-align: center;
         }
 
         section h2 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text-primary); /* Títulos de seção em marrom escuro */
+            color: var(--text-dark-brown);
             font-size: 3rem;
             text-align: center;
             margin-bottom: 30px;
@@ -109,64 +106,63 @@
             display: block;
             width: 100px;
             height: 4px;
-            background-color: var(--text-primary); /* Linha em marrom escuro */
+            background-color: var(--accent-gold);
             margin: 15px auto 0;
             border-radius: 2px;
         }
 
         section h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text-primary); /* Subtítulos em marrom escuro */
+            color: var(--text-dark-brown);
             font-size: 2.2rem; /* Tamanho padronizado */
             margin-top: 40px;
             margin-bottom: 20px;
-            border-left: 6px solid var(--accent-color); /* Borda em dourado/bronze */
+            border-left: 6px solid var(--accent-gold);
             padding-left: 20px;
-            text-align: left; /* Subtítulos alinhados à esquerda */
-            display: inline-block; /* Permite que o h3 seja centralizado como um bloco */
-            max-width: 100%; /* Garante que não ultrapasse o container */
+            text-align: left;
+            display: inline-block;
+            max-width: 100%;
         }
 
         p {
             font-size: 1.3rem;
-            color: var(--text-dark); /* Parágrafos em cinza escuro */
+            color: var(--text-medium-grey);
             margin-bottom: 20px;
-            text-align: center; /* Parágrafos centralizados */
-            display: inline-block; /* Permite que o p seja centralizado como um bloco */
-            max-width: 800px; /* Limita a largura para melhor leitura quando centralizado */
+            text-align: center;
+            display: inline-block;
+            max-width: 800px;
         }
 
-        /* Listas de Benefícios Aprimoradas */
         ul {
             list-style: none;
             padding-left: 0;
             margin-bottom: 30px;
-            text-align: center; /* Centraliza os LI's como blocos */
+            text-align: center;
         }
 
         ul li {
-            padding-left: 45px; /* Espaço para o ícone */
+            padding-left: 45px;
             margin-bottom: 18px;
             position: relative;
             font-size: 1.25rem;
-            color: var(--text-dark); /* Texto da lista em cinza escuro */
-            display: inline-block; /* Faz com que o LI se comporte como bloco, mas seja centralizado pelo UL */
-            text-align: left; /* Alinha o texto DENTRO do LI à esquerda para leitura */
-            max-width: 500px; /* Limita a largura do item da lista */
+            color: var(--text-medium-grey);
+            display: inline-block;
+            text-align: left;
+            max-width: 500px;
         }
 
         ul li::before {
             content: "✓";
             position: absolute;
-            left: 0; /* Alinha o ícone ao início do padding-left do LI */
+            left: 0;
             top: 0;
-            color: var(--text-primary); /* Checkmark em marrom escuro */
+            color: var(--accent-gold);
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
         }
 
-        /* Imagens */
+        /* Imagens - AGORA COM CAMINHOS LOCAIS! */
         .hero-image, .section-image {
             width: 100%;
             height: 400px;
@@ -178,13 +174,13 @@
         }
 
         .hero-image {
-            /* Imagem de sala de terapia calma em tons neutros/bege */
-            background-image: url('https://images.unsplash.com/photo-1560007884-0919677c1739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNwYXxlbnwwfHwwfHw0&auto=format&fit=crop&w=800&q=60');
+            /* Caminho local para a primeira imagem */
+            background-image: url('image_0cd7e4.png');
         }
 
         .growth-image {
-            /* Imagem de conceito de crescimento em tons neutros/bege */
-            background-image: url('https://images.unsplash.com/photo-1559544522-aa2551458526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3Jvd3RoJTIwcGxhbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60');
+            /* Caminho local para a segunda imagem */
+            background-image: url('image_0cd807.png');
         }
 
         /* Chamada para Ação (CTA) */
@@ -192,8 +188,8 @@
             text-align: center;
             margin-top: 80px;
             padding: 60px 40px;
-            background-color: var(--primary-color); /* Fundo bege claro */
-            color: var(--text-dark); /* Texto em marrom escuro */
+            background-color: var(--secondary-bg-soft);
+            color: var(--text-dark-brown);
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
@@ -202,7 +198,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: var(--text-primary); /* Texto do CTA em marrom escuro */
+            color: var(--text-dark-brown);
             font-weight: 700;
         }
 
@@ -229,22 +225,22 @@
             text-align: center;
             padding: 40px;
             font-size: 1rem;
-            color: var(--text-light);
-            border-top: 1px solid var(--border-color);
+            color: var(--text-light-grey);
+            border-top: 1px solid var(--border-light);
             margin-top: 80px;
-            background-color: var(--bg-card);
+            background-color: #ffffff; /* Branco puro para o rodapé */
         }
 
         /* Responsividade */
-        @media (max-width: 992px) { /* Ajuste para tablets */
+        @media (max-width: 992px) {
             .container {
-                padding: 0 40px; /* Diminui um pouco o padding lateral */
+                padding: 0 40px;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 20px; /* Padding padrão para celular */
+                padding: 0 20px;
             }
             header h1 {
                 font-size: 3rem;
@@ -267,8 +263,8 @@
                 font-size: 2.4rem;
             }
             section h3 {
-                font-size: 1.8rem;
-                text-align: left; /* Subtítulos continuam à esquerda */
+                font-size: 2.2rem; /* Tamanho padronizado */
+                text-align: left;
                 display: block;
             }
             p, ul li {
@@ -279,8 +275,8 @@
                 max-width: 90%;
             }
             ul li::before {
-                left: calc(50% - 190px); /* Ajuste da posição do ícone em telas menores */
-                color: var(--text-primary);
+                left: calc(50% - 190px);
+                color: var(--accent-gold);
             }
             .hero-image, .section-image {
                 height: 300px;
@@ -290,7 +286,7 @@
             }
             .call-to-action p {
                 font-size: 1.8rem;
-                color: var(--text-primary);
+                color: var(--text-dark-brown);
             }
             .btn-whatsapp {
                 font-size: 1.4rem;
@@ -312,15 +308,15 @@
                 font-size: 1.05rem;
             }
             ul li::before {
-                left: calc(50% - 160px); /* Ajuste mais fino para telas muito pequenas */
-                color: var(--text-primary);
+                left: calc(50% - 160px);
+                color: var(--accent-gold);
             }
             .hero-image, .section-image {
                 height: 200px;
             }
             .call-to-action p {
                 font-size: 1.5rem;
-                color: var(--text-primary);
+                color: var(--text-dark-brown);
             }
             .btn-whatsapp {
                 font-size: 1.1rem;
@@ -363,8 +359,7 @@
         É um espaço seguro, acolhedor e transformador, onde você aprende, compartilha e desenvolve forças internas para viver com mais bem-estar, propósito e realização. Nossos treinamentos são desenhados para proporcionar uma experiência de crescimento coletivo e significativo.
     </p>
     <div class="section-image growth-image"></div>
-    <h3>🌱 Vantagens do treinamento em grupo:</h3>
-    <ul>
+    <h3>🌱 Vantagens do treinamento em grupo</h3> <ul>
         <li>Conexão genuína com outras pessoas que buscam o mesmo crescimento</li>
         <li>Trocas enriquecedoras de experiências e perspectivas diversas</li>
         <li>Sensação de pertencimento e apoio mútuo em sua jornada</li>
