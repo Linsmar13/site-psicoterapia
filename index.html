@@ -6,17 +6,18 @@
     <title>Psicoterapia Positiva - Bem-Estar e Crescimento Pessoal</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Cores Base */
+        /* Cores Base - BEGE e MARROM */
         :root {
-            --primary-color: #2c7a7b; /* Verde-azulado principal */
-            --secondary-color: #285e61; /* Verde-azulado mais escuro */
-            --accent-color: #f3d41f; /* Amarelo para destaque */
-            --text-dark: #333;
+            --primary-color: #f5f5dc; /* Bege claro principal (para fundo de seções de destaque) */
+            --secondary-color: #f0ead6; /* Um bege ligeiramente mais claro para subtileza */
+            --accent-color: #b8860b; /* Um dourado/bronze para destaques sutis como a borda do h3 */
+            --text-dark: #333; /* Cor para parágrafos gerais */
             --text-medium: #444;
             --text-light: #666;
-            --bg-light: #f9fdfb; /* Fundo muito claro */
-            --bg-card: #ffffff;
-            --border-color: #ddd;
+            --text-primary: #5c4033; /* Marrom escuro para títulos, links, elementos chave */
+            --bg-light: #fffafa; /* Fundo geral da página, muito claro */
+            --bg-card: #ffffff; /* Fundo dos "cartões" (seções) */
+            --border-color: #eee;
         }
 
         /* Reset Básico e Fontes */
@@ -37,11 +38,11 @@
 
         /* Cabeçalho e Título Principal */
         header {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--primary-color); /* Fundo bege claro */
+            color: var(--text-primary); /* Título em marrom escuro */
             text-align: center;
             padding: 50px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         header h1 {
@@ -50,23 +51,23 @@
             font-size: 4.5rem;
             letter-spacing: 2px;
             font-weight: 800;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         /* Navegação */
         nav {
-            background-color: #ffffff;
+            background-color: var(--bg-card); /* Fundo branco/creme */
             text-align: center;
             padding: 18px 0;
             border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         nav a {
-            color: var(--secondary-color);
+            color: var(--text-primary); /* Links em marrom escuro */
             text-decoration: none;
             padding: 12px 25px;
             margin: 0 10px;
@@ -78,24 +79,24 @@
         }
 
         nav a:hover {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--primary-color); /* Fundo bege claro no hover */
+            color: var(--text-dark); /* Texto mais escuro no hover */
         }
 
         /* Seções de Conteúdo */
         section {
             margin-bottom: 60px;
             padding: 50px 0;
-            background-color: var(--bg-card);
+            background-color: var(--bg-card); /* Fundo branco/creme para os cartões das seções */
             border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
             margin-top: 40px;
             text-align: center; /* Centraliza o conteúdo da seção (blocos) */
         }
 
         section h2 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--secondary-color);
+            color: var(--text-primary); /* Títulos de seção em marrom escuro */
             font-size: 3rem;
             text-align: center;
             margin-bottom: 30px;
@@ -108,18 +109,18 @@
             display: block;
             width: 100px;
             height: 4px;
-            background-color: var(--primary-color);
+            background-color: var(--text-primary); /* Linha em marrom escuro */
             margin: 15px auto 0;
             border-radius: 2px;
         }
 
         section h3 {
             font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-            font-size: 2.2rem;
+            color: var(--text-primary); /* Subtítulos em marrom escuro */
+            font-size: 2.2rem; /* Tamanho padronizado */
             margin-top: 40px;
             margin-bottom: 20px;
-            border-left: 6px solid var(--accent-color);
+            border-left: 6px solid var(--accent-color); /* Borda em dourado/bronze */
             padding-left: 20px;
             text-align: left; /* Subtítulos alinhados à esquerda */
             display: inline-block; /* Permite que o h3 seja centralizado como um bloco */
@@ -128,7 +129,7 @@
 
         p {
             font-size: 1.3rem;
-            color: var(--text-dark);
+            color: var(--text-dark); /* Parágrafos em cinza escuro */
             margin-bottom: 20px;
             text-align: center; /* Parágrafos centralizados */
             display: inline-block; /* Permite que o p seja centralizado como um bloco */
@@ -148,7 +149,7 @@
             margin-bottom: 18px;
             position: relative;
             font-size: 1.25rem;
-            color: var(--text-dark);
+            color: var(--text-dark); /* Texto da lista em cinza escuro */
             display: inline-block; /* Faz com que o LI se comporte como bloco, mas seja centralizado pelo UL */
             text-align: left; /* Alinha o texto DENTRO do LI à esquerda para leitura */
             max-width: 500px; /* Limita a largura do item da lista */
@@ -159,7 +160,7 @@
             position: absolute;
             left: 0; /* Alinha o ícone ao início do padding-left do LI */
             top: 0;
-            color: var(--primary-color);
+            color: var(--text-primary); /* Checkmark em marrom escuro */
             font-weight: bold;
             font-size: 1.6rem;
             line-height: 1;
@@ -173,15 +174,17 @@
             background-position: center;
             border-radius: 12px;
             margin-bottom: 40px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
         }
 
         .hero-image {
-            background-image: url('https://images.unsplash.com/photo-1556761175-b413da4672af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1lZGl0YXRpb24lMjBzcGFjZXxlbnwwfHwwfHw0&auto=format&fit=crop&w=800&q=60'); /* Imagem de sala de terapia calma */
+            /* Imagem de sala de terapia calma em tons neutros/bege */
+            background-image: url('https://images.unsplash.com/photo-1560007884-0919677c1739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNwYXxlbnwwfHwwfHw0&auto=format&fit=crop&w=800&q=60');
         }
 
         .growth-image {
-            background-image: url('https://images.unsplash.com/photo-1503777100072-77cb99004a8b?ixlib=rb-4.0.3&ixid=M3wxMjA0fDB8MHxzZWFyY2h8Nnx8Z3Jvd3RoJTIwY29uY2VwdHxlbnwwfHwwfHw0&auto=format&fit=crop&w=800&q=60'); /* Imagem de conceito de crescimento */
+            /* Imagem de conceito de crescimento em tons neutros/bege */
+            background-image: url('https://images.unsplash.com/photo-1559544522-aa2551458526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3Jvd3RoJTIwcGxhbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60');
         }
 
         /* Chamada para Ação (CTA) */
@@ -189,23 +192,23 @@
             text-align: center;
             margin-top: 80px;
             padding: 60px 40px;
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--primary-color); /* Fundo bege claro */
+            color: var(--text-dark); /* Texto em marrom escuro */
             border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
 
         .call-to-action p {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
             margin-bottom: 40px;
-            color: white;
+            color: var(--text-primary); /* Texto do CTA em marrom escuro */
             font-weight: 700;
         }
 
         .btn-whatsapp {
             display: inline-block;
-            background-color: #25d366;
+            background-color: #25d366; /* Mantive o verde do WhatsApp para o ícone ser reconhecível */
             color: white;
             padding: 20px 45px;
             border-radius: 40px;
@@ -237,9 +240,6 @@
             .container {
                 padding: 0 40px; /* Diminui um pouco o padding lateral */
             }
-            ul li::before {
-                left: calc(50% - 245px); /* Ajuste para telas menores que 992px */
-            }
         }
 
         @media (max-width: 768px) {
@@ -269,17 +269,18 @@
             section h3 {
                 font-size: 1.8rem;
                 text-align: left; /* Subtítulos continuam à esquerda */
-                display: block; /* Volta a ser block para ocupar toda largura */
+                display: block;
             }
             p, ul li {
                 font-size: 1.15rem;
-                text-align: center; /* Parágrafos e itens de lista centralizados */
+                text-align: center;
             }
             ul li {
-                max-width: 90%; /* Ajusta a largura máxima para itens da lista em telas menores */
+                max-width: 90%;
             }
             ul li::before {
-                left: calc(50% - 190px); /* Ajusta a posição do ícone em telas menores */
+                left: calc(50% - 190px); /* Ajuste da posição do ícone em telas menores */
+                color: var(--text-primary);
             }
             .hero-image, .section-image {
                 height: 300px;
@@ -289,6 +290,7 @@
             }
             .call-to-action p {
                 font-size: 1.8rem;
+                color: var(--text-primary);
             }
             .btn-whatsapp {
                 font-size: 1.4rem;
@@ -311,12 +313,14 @@
             }
             ul li::before {
                 left: calc(50% - 160px); /* Ajuste mais fino para telas muito pequenas */
+                color: var(--text-primary);
             }
             .hero-image, .section-image {
                 height: 200px;
             }
             .call-to-action p {
                 font-size: 1.5rem;
+                color: var(--text-primary);
             }
             .btn-whatsapp {
                 font-size: 1.1rem;
@@ -404,7 +408,7 @@
     <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
         Fale Conosco pelo WhatsApp
     </a>
-    <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(255,255,255,0.8);">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
+    <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(0,0,0,0.6);">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
 </section>
 
 <footer>
