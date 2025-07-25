@@ -90,6 +90,17 @@
             white-space: nowrap; /* Tenta manter o subtítulo em uma linha, se possível */
         }
 
+        /* NOVO ESTILO: Nomes das treinadoras */
+        .trainers-names {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 15px; /* Espaço acima dos nomes */
+            margin-bottom: 0; /* Remover margem inferior padrão do p */
+            text-align: center;
+        }
+
 
         /* Navegação */
         nav {
@@ -284,6 +295,9 @@
                 width: 80px;
                 height: 80px;
             }
+            .trainers-names { /* Ajuste responsivo */
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -305,6 +319,10 @@
             .header-content {
                 flex-direction: column;
                 gap: 15px;
+            }
+            .trainers-names { /* Ajuste responsivo */
+                font-size: 1.1rem;
+                margin-top: 10px;
             }
             nav {
                 padding: 12px 0;
@@ -372,6 +390,9 @@
                 width: 60px;
                 height: 60px;
             }
+            .trainers-names { /* Ajuste responsivo */
+                font-size: 1rem;
+            }
             section h2 {
                 font-size: 1.8rem;
             }
@@ -403,20 +424,24 @@
 </head>
 <body>
 
-<div id="top-of-page"></div> <header>
+<div id="top-of-page"></div>
+
+<header>
     <div class="container header-content">
         <div class="header-logo-bg"></div> 
         <h1>TREINAMENTO PABE<span>Práticas &gt; Atitude &gt; Bem-Estar</span></h1> 
-    </div>
+        <p class="trainers-names">Waleska Cruz e Cybele Lassandro</p> </div>
 </header>
 
 <nav>
     <div class="container">
-        <a href="#top-of-page">Início</a> <a href="#contato">Contato</a>
+        <a href="#top-of-page">Início</a>
+        <a href="#contato">Contato</a>
     </div>
 </nav>
 
-<section class="container"> <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
+<section class="container">
+    <h2>🎯 Seu Caminho para o Bem-Estar e Crescimento!</h2>
     <p>
         O **TREINAMENTO PABE** é uma jornada transformadora focada em te equipar com **Práticas** eficientes, fortalecer sua **Atitude** positiva e promover um profundo **Bem-Estar**. Descubra um espaço de aprendizado e desenvolvimento para aplicar a Psicologia Positiva no seu dia a dia.
     </p>
