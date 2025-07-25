@@ -3,154 +3,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Psicoterapia Positiva - Treinamento em Grupo e Terapia Individual</title>
+  <title>Psicoterapia Positiva - Bem-Estar e Crescimento Pessoal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* Cores Base */
+    :root {
+      --primary-color: #2c7a7b; /* Verde-azulado principal */
+      --secondary-color: #285e61; /* Verde-azulado mais escuro */
+      --accent-color: #f3d41f; /* Amarelo para destaque */
+      --text-dark: #333;
+      --text-medium: #444;
+      --text-light: #666;
+      --bg-light: #f9fdfb; /* Fundo muito claro */
+      --bg-card: #ffffff;
+      --border-color: #ddd;
+    }
+
+    /* Reset Básico e Fontes */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fdfb;
-      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-medium);
       margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
       padding: 0 20px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
     }
+
+    /* Cabeçalho e Navegação */
     header {
+      background-color: var(--primary-color);
+      color: white;
       text-align: center;
-      padding: 40px 0 20px;
-      color: #2c7a7b;
+      padding: 30px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 1px;
     }
+
     nav {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    nav a {
-      color: #285e61;
-      text-decoration: none;
-      padding: 10px 15px;
-      margin: 0 10px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      font-weight: 600;
-    }
-    nav a:hover {
-      background-color: #e6f1f0;
-    }
-    section {
-      margin-bottom: 40px;
-      padding: 20px;
       background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    nav a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 8px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    /* Seções de Conteúdo */
+    section {
+      margin-bottom: 50px;
+      padding: 40px 0;
+      background-color: var(--bg-card);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-top: 30px;
+    }
+
     section h2 {
-      color: #285e61;
-      border-bottom: 2px solid #2c7a7b;
-      padding-bottom: 8px;
-      margin-bottom: 16px;
-      font-size: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--secondary-color);
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
     }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
     section h3 {
-      color: #2c7a7b;
-      font-size: 1.5rem;
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1rem; /* Um pouco menor para blocos de texto maiores */
-      line-height: 1.6;
-      color: #444;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-top: 30px;
       margin-bottom: 15px;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 15px;
     }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Listas de Benefícios */
     ul {
       list-style: none;
       padding-left: 0;
-      margin-bottom: 20px;
-    }
-    ul li {
-      padding-left: 30px; /* Aumenta o espaço para o ícone */
-      margin-bottom: 12px;
-      position: relative;
-      font-size: 1.1rem;
-      line-height: 1.5;
-    }
-    ul li::before {
-      content: "✨"; /* Ícone de estrela para as listas */
-      position: absolute;
-      left: 0;
-      color: #f3d41f; /* Cor amarela para o brilho */
-      font-weight: bold;
-      font-size: 1.3rem;
-      line-height: 1;
-    }
-    .call-to-action {
-      text-align: center;
-      margin-top: 50px;
-      padding: 30px;
-      background-color: #e6f1f0; /* Fundo mais claro para destaque */
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .call-to-action p {
-      font-size: 1.5rem;
-      color: #285e61;
       margin-bottom: 25px;
-      font-weight: 600;
-    }
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: #25d366;
-      color: white;
-      padding: 16px 32px; /* Aumentado um pouco o padding */
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1.3rem; /* Aumentado um pouco a fonte */
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      font-weight: 600;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .btn-whatsapp:hover {
-      background-color: #1ebe57;
-      transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #ddd;
-      margin-top: 60px;
     }
 
-    /* Adaptações para telas menores */
+    ul li {
+      padding-left: 35px;
+      margin-bottom: 15px;
+      position: relative;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+    }
+
+    ul li::before {
+      content: "✓"; /* Ícone de check para listas */
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    /* Imagens */
+    .hero-image, .section-image {
+      width: 100%;
+      height: 350px; /* Altura fixa para a imagem principal */
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .hero-image {
+      background-image: url('http://googleusercontent.com/image_collection/image_retrieval/1341738089739618186_0'); /* Imagem de sala de terapia calma */
+    }
+
+    .growth-image {
+      background-image: url('http://googleusercontent.com/image_collection/image_retrieval/7059401320338783116_0'); /* Imagem de conceito de crescimento */
+    }
+
+    /* Chamada para Ação (CTA) */
+    .call-to-action {
+      text-align: center;
+      margin-top: 60px;
+      padding: 50px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .call-to-action p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: #25d366; /* Verde WhatsApp */
+      color: white;
+      padding: 18px 38px;
+      border-radius: 35px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: 700;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
+      transform: translateY(-3px);
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border-color);
+      margin-top: 60px;
+      background-color: var(--bg-card);
+    }
+
+    /* Responsividade */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
       }
+      nav {
+        padding: 10px 0;
+      }
       nav a {
-        margin: 0 5px;
-        padding: 8px 12px;
+        display: block;
+        margin: 8px auto;
+        padding: 8px 15px;
         font-size: 0.9rem;
+        max-width: 200px;
+      }
+      section {
+        padding: 30px 15px;
+        margin-top: 20px;
       }
       section h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
-      p {
+      section h3 {
+        font-size: 1.5rem;
+      }
+      p, ul li {
         font-size: 1rem;
       }
-      ul li {
-        font-size: 1rem;
+      .hero-image, .section-image {
+        height: 250px;
       }
-      .btn-whatsapp {
-        font-size: 1.1rem;
-        padding: 12px 24px;
+      .call-to-action {
+        padding: 30px 15px;
       }
       .call-to-action p {
+        font-size: 1.4rem;
+      }
+      .btn-whatsapp {
         font-size: 1.2rem;
+        padding: 14px 28px;
       }
     }
   </style>
@@ -158,17 +265,22 @@
 <body>
 
 <header>
-  <h1>Psicoterapia Positiva</h1>
+  <div class="container">
+    <h1>Psicoterapia Positiva</h1>
+  </div>
 </header>
 
 <nav>
-  <a href="#inicio">Início</a>
-  <a href="#treinamento-grupo">Treinamento em Grupo</a>
-  <a href="#terapia-individual">Terapia Individual</a>
-  <a href="#contato">Contato</a>
+  <div class="container">
+    <a href="#inicio">Início</a>
+    <a href="#treinamento-grupo">Treinamento em Grupo</a>
+    <a href="#terapia-individual">Terapia Individual</a>
+    <a href="#contato">Contato</a>
+  </div>
 </nav>
 
-<section id="inicio">
+<section id="inicio" class="container">
+  <div class="hero-image"></div>
   <h2>🌟 Psicologia Positiva na Prática!</h2>
   <p>
     A Psicoterapia Positiva é uma abordagem focada em fortalecer suas virtudes, emoções positivas e propósito de vida. Aqui, você encontra um espaço seguro e acolhedor para desenvolver sua saúde mental, bem-estar e qualidade de vida.
@@ -178,61 +290,64 @@
   </p>
 </section>
 
-<section id="treinamento-grupo">
+<section id="treinamento-grupo" class="container">
   <h2>💛 O que é um treinamento de Psicologia Positiva?</h2>
   <p>
     É um espaço seguro, acolhedor e transformador, onde você aprende, compartilha e desenvolve forças internas para viver com mais bem-estar, propósito e realização. Nossos treinamentos são desenhados para proporcionar uma experiência de crescimento coletivo e significativo.
   </p>
+  <div class="section-image growth-image"></div>
   <h3>🌱 Vantagens do treinamento em grupo:</h3>
   <ul>
-    <li>Conexão com outras pessoas que buscam o mesmo crescimento</li>
-    <li>Trocas enriquecedoras de experiências e perspectivas</li>
-    <li>Sensação de pertencimento e apoio mútuo</li>
-    <li>Acesso a ferramentas práticas e exercícios de bem-estar</li>
+    <li>Conexão genuína com outras pessoas que buscam o mesmo crescimento</li>
+    <li>Trocas enriquecedoras de experiências e perspectivas diversas</li>
+    <li>Sensação de pertencimento e apoio mútuo em sua jornada</li>
+    <li>Acesso a ferramentas práticas e exercícios de bem-estar comprovados</li>
     <li>Custo mais acessível em comparação com a terapia individual</li>
   </ul>
 </section>
 
-<section id="terapia-individual">
+<section id="terapia-individual" class="container">
   <h2>🧠 E a terapia individual?</h2>
   <p>
     A terapia individual é um espaço exclusivo e profundo de autoconhecimento, ideal para quem precisa lidar com questões pessoais mais sensíveis ou específicas. É um caminho personalizado onde o foco é totalmente em suas necessidades e desafios, guiado por um profissional dedicado.
   </p>
   <p>
-    Aqui, você tem a oportunidade de explorar suas emoções, pensamentos e padrões de comportamento em um ambiente confidencial, buscando insights e desenvolvendo estratégias para superar obstáculos e alcançar uma vida mais plena.
+    Aqui, você tem a oportunidade de explorar suas emoções, pensamentos e padrões de comportamento em um ambiente confidencial, buscando insights e desenvolvendo estratégias para superar obstáculos e alcançar uma vida mais plena e com mais significado.
   </p>
 </section>
 
-<section id="escolha">
+<section id="escolha" class="container">
   <h2>💬 Mas qual é o ideal pra mim?</h2>
   <p>
-    Não é uma escolha “certa” ou “errada”, mas sim o que melhor se adapta ao seu momento e objetivos atuais. Ambas as abordagens são poderosas e podem transformar sua vida.
+    Não é uma escolha “certa” ou “errada”, mas sim o que melhor se adapta ao seu momento e objetivos atuais. Ambas as abordagens são poderosas e podem transformar sua vida de maneiras únicas.
   </p>
   <p>
-    <strong>→ O treinamento em grupo é excelente</strong> pra quem busca crescimento pessoal, motivação, leveza no dia a dia, e deseja aprender novas ferramentas em um ambiente de apoio coletivo.
+    <strong>→ O treinamento em grupo é excelente</strong> para quem busca crescimento pessoal, motivação, leveza no dia a dia, e deseja aprender novas ferramentas em um ambiente de apoio coletivo e inspirador.
   </p>
   <p>
     <strong>→ A terapia individual é ideal</strong> quando há dores emocionais mais profundas, questões específicas a serem trabalhadas, traumas ou a necessidade de uma atenção individualizada e confidencial para explorar e resolver desafios pessoais complexos.
   </p>
 </section>
 
-<section>
+<section class="container">
   <h2>🌸 Juntas, essas experiências se complementam.</h2>
   <p>
-    Você não precisa escolher apenas uma! Muitas pessoas encontram um grande benefício ao fazer terapia individual e também participar de um grupo, pois as experiências se enriquecem mutuamente. Ambas são formas potentes de cuidar de você e investir no seu bem-estar.
+    Você não precisa escolher apenas uma! Muitas pessoas encontram um grande benefício ao fazer terapia individual e também participar de um grupo, pois as experiências se enriquecem mutuamente. Ambas são formas potentes de cuidar de você e investir no seu bem-estar e desenvolvimento contínuo.
   </p>
 </section>
 
-<section id="contato" class="call-to-action">
+<section id="contato" class="call-to-action container">
   <p>✨ Quer dar o primeiro passo com mais leveza e acolhimento?</p>
   <a class="btn-whatsapp" href="https://wa.me/seunumerodetelefone" target="_blank" rel="noopener">
     Fale Conosco pelo WhatsApp
   </a>
-  <p style="font-size: 0.9rem; margin-top: 15px; color: #555;">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
+  <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(255,255,255,0.8);">Substitua "seunumerodetelefone" no link do WhatsApp pelo seu número com o código do país (ex: 5521912345678).</p>
 </section>
 
 <footer>
-  &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
+  <div class="container">
+    &copy; 2025 Psicoterapia Positiva - Todos os direitos reservados
+  </div>
 </footer>
 
 </body>
